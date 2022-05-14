@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 12, 2018, 3:55:53 PM
+    Author     : Mohamed GH
+*/
+
+
+#hh{
+    
+    -fx-text-fill:black;
+    -fx-font-weight:bold;
+    -fx-font-family:"Arial Narrow";
+     -fx-font-size:18px;
+
+}
+
+.button{
+    
+     
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#61a2b1,#2A5058);
+    -fx-font-weight:bold;
+    -fx-font-family:"Arial Narrow";
+     -fx-font-size:15px;
+}

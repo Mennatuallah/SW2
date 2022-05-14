@@ -5,10 +5,7 @@
  */
 package projh;
 
-/**
- *
- * @author الاستاذ
- */
+
 public class Admin extends staff {
      public Admin() {
 

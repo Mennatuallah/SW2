@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 14, 2018, 1:11:49 PM
+    Author     : الاستاذ
+*/
+.root{
+    -fx-background-image: url("y.jpeg");
+    -fx-background-size:cover;
+     -fx-background-cover:non-repate;
+}
+.button {
+    -fx-font-weight:bold;
+    -fx-font-family:"tahoma";
+    -fx-font-size:15;
+    -fx-fill: #ccffcc ;
+}

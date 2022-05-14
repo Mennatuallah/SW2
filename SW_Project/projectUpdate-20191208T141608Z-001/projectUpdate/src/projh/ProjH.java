@@ -10,7 +10,7 @@ import java.util.Scanner;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import javafxapplication3.Login;
+import View.javafxapplication3.Login;
 
 /**
  *

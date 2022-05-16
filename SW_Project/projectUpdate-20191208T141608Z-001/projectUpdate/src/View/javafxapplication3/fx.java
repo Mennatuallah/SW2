@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class fx extends Application {
     

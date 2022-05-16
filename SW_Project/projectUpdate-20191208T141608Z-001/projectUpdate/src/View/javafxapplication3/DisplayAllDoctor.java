@@ -20,7 +20,7 @@ import projh.Admin;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class DisplayAllDoctor extends Application {
     

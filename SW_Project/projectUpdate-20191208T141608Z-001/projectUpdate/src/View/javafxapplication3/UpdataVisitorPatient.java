@@ -28,7 +28,7 @@ import projh.VisitorPatient;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class UpdataVisitorPatient extends Application {
     

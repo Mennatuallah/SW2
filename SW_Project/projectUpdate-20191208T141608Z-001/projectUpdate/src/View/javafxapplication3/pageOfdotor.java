@@ -20,7 +20,7 @@ import projh.*;
 
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class pageOfdotor extends Application {
     

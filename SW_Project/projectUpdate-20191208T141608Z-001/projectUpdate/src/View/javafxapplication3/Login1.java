@@ -33,7 +33,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class Login1 extends Application {
     

@@ -10,10 +10,11 @@ package projh;
  * @author 
  */
 import java.io.Serializable;
+import java.rmi.server.ObjID;
 
  
 public abstract class person implements Serializable {
-    protected int id;
+    public int id;
     protected String userName;
     protected String pass;
     protected String fname;
@@ -102,6 +103,10 @@ public abstract class person implements Serializable {
             return true;
         }
         return false;
+    }
+
+    public void showMyReport(ObjID id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

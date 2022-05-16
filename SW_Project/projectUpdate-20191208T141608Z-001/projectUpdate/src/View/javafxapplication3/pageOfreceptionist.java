@@ -13,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import projh.receptionist;
 
 /**
  *
@@ -68,6 +69,13 @@ public class pageOfreceptionist extends Application {
         root.getChildren().add(btn2);
         root.getChildren().add(btn3);
         root.getChildren().add(btn4);
+        receptionist r = new receptionist();
+        btn1.setOnAction((ActionEvent event) -> {
+         r.displayALLTimeTable();
+        });
+        btn2.setOnAction((ActionEvent event) ->{
+            r.displayALLAppoint();
+        });
         //Button3
         btn3.setOnAction((ActionEvent e) -> {
             window.close();

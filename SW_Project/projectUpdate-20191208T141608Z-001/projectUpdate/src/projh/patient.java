@@ -7,7 +7,7 @@ package projh;
 import java.io.Serializable;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public abstract class patient extends person implements Serializable  {
     protected String Time ;
@@ -65,11 +65,7 @@ public abstract class patient extends person implements Serializable  {
     }
      
      
-    /*public void setmyMassage(String myMassage)
-    {
-        this.myMassage=myMassage;
-    }
-    */
+    
     
        public void setdID(int dID)
     {

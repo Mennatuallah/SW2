@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import static projh.ResidentPatient.rpatients;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class bed implements Serializable{
     
@@ -45,8 +45,17 @@ public class bed implements Serializable{
         return FManger.write(BedFileName,beds);
     }
     
+    public static void  bookbed(int mybedId,int myroomNumber)
+    {
+        bed b =new bed(mybedId,myroomNumber);
+        if(b.addbed())
+        {
+            System.out.println("added bed Successfully ");
+        }
+        else{
+            System.out.println("Failed to insert ... !");
+        }  
     
-    
-    
+    }
     
 }

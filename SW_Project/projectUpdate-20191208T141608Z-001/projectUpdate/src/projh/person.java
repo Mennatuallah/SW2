@@ -7,7 +7,7 @@ package projh;
 
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 import java.io.Serializable;
 
@@ -98,7 +98,7 @@ public abstract class person implements Serializable {
     }
 
     public boolean login(String userName, String Pass) {
-        if (userName.equals("Admin@yahoo.com") && Pass.equals("12345678")) {
+        if (userName.equals("Admin") && Pass.equals("12345678")) {
             return true;
         }
         return false;

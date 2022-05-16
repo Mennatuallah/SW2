@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class VisitorPatient extends patient implements Serializable{
     
@@ -130,7 +130,7 @@ public class VisitorPatient extends patient implements Serializable{
                        +" Age : " + age + "  "
                        + "My DR. Name : " + Dfname +" "+Dlname+"  "
                        + "Time : " + Time +"  "
-                       + "Dept: " + myDept.getDepartmentName() + "\n"
+                       + "Dept: " + myDept.getDeptName() + "\n"
                        +"UserName: " + userName + "\t Password: " + pass + "\n";
     }
 

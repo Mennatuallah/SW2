@@ -83,7 +83,7 @@ public class Login extends Application {
      b.setOnAction(new EventHandler<ActionEvent>() {
          public void handle(ActionEvent e) {
               
-                if(tf.getText().equals("Admin@yahoo.com")&&pf.getText().equals("12345678")){
+                if(tf.getText().equals("HospitalManager@yahoo.com")&&pf.getText().equals("12345678")){
                     primaryStage.close();
                     Login1 x = new Login1();
                     try {

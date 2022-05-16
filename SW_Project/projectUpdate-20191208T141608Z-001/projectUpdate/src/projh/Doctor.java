@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class Doctor extends staff implements Serializable {
     
@@ -43,7 +43,7 @@ public class Doctor extends staff implements Serializable {
         return commitToFile();
     }
     
-  public  String displayAllTimeTable() {
+    String displayAllTimeTable() {
         loadFromFile();
         String S = "\nAll timetable Data:\n";
         for (Doctor x : doctors) {
@@ -69,8 +69,8 @@ public class Doctor extends staff implements Serializable {
     
     public void MakeReport(int dID,int pID,String myreport)
     {
-        appointment x= new appointment();
-        x.addReport(dID,pID, myreport);             
+        appointment ap= new appointment();
+        ap.addReport(dID,pID, myreport);             
     }
     
     public void showMHistoryofVisitor(int pid)
@@ -81,8 +81,8 @@ public class Doctor extends staff implements Serializable {
     
      public void showMHistoryofResident(int pid)
     {
-        ResidentPatient v = new ResidentPatient();
-        System.out.println(v.dispalyMHistory(pid));
+        ResidentPatient rp = new ResidentPatient();
+        System.out.println(rp.dispalyMHistory(pid));
     }
      
     public String displayAllDoctors() {
@@ -143,7 +143,7 @@ public class Doctor extends staff implements Serializable {
         return "\nmy name is : " + fname + " " + lname + "  " 
                        +" ID : "+id +"  "
                        +" Age : " + age + "  "
-                       + "Dept: " + myDept.getDepartmentName() + "  "
+                       + "Dept: " + myDept.getDeptName() + "  "
                        +"UserName: " + userName + " Password: " + pass + "\n";
     }
     

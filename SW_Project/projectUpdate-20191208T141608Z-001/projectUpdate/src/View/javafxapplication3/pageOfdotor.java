@@ -29,11 +29,11 @@ public class pageOfdotor extends Application {
     @Override
     public void start(Stage primaryStage) {
         Label lb1=new Label("Doctor");
-        Label lb2=new Label("To write the report & cheak the health of the patient");
-        Button btn1=new Button("My Patient");
-        Label lb3=new Label("To show the history of the Visitor patient");
+        Label lb2=new Label("To Write the report & Check the health of the Patient");
+        Button btn1=new Button("MakeReport");
+        Label lb3=new Label("To show the History of the Visitor Patient");
         Button btn2=new Button("Visitor Patient History");
-        Label lb88=new Label("To show the history of the Resident patient");
+        Label lb88=new Label("To show the History of the Resident Patient");
         Button btn8=new Button("Resident Patient History");
         Label lb4=new Label("To show the private message from patient");
         Button btn3=new Button("Private Message");

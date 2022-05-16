@@ -11,8 +11,8 @@ import java.util.ArrayList;
  * @author الاستاذ
  */
 public class department implements Serializable {
-    private String DeptID;
-    private String DeptName;
+    private String DepartmentID;
+    private String DepartmentName;
     filemanger FManger = new filemanger();
     private final String DeptFileName = "./Department.bin";
     public static ArrayList<department> departments = new ArrayList<department>();
@@ -23,30 +23,30 @@ public class department implements Serializable {
     }
 
     public department(String DeptID, String DeptName) {
-        this.DeptID = DeptID;
-        this.DeptName = DeptName;
+        this.DepartmentID = DeptID;
+        this.DepartmentName = DeptName;
     }
 
-    public void setDeptID(String DeptID) {
-        this.DeptID = DeptID;
+    public void setDepartmentID(String DepartmentID) {
+        this.DepartmentID = DepartmentID;
     }
 
-    public void setDeptName(String DeptName) {
-        this.DeptName = DeptName;
-    }
-
-
-    public String getDeptID() {
-        return this.DeptID;
-    }
-
-    public String getDeptName() {
-        return this.DeptName;
+    public void setDepartmentName(String DepartmentName) {
+        this.DepartmentName = DepartmentName;
     }
 
 
+    public String getDepartmentID() {
+        return this.DepartmentID;
+    }
 
-    public boolean addDept() {
+    public String getDepartmentName() {
+        return this.DepartmentName;
+    }
+
+
+
+    public boolean addDepartment() {
         loadFromFile();
         departments.add(this);
         return commitToFile();
@@ -62,6 +62,6 @@ public class department implements Serializable {
 
     @Override
     public String toString() {
-        return "Dept Name : " + DeptName + "\n";
+        return "Dept Name : " + DepartmentName + "\n";
     }
 }

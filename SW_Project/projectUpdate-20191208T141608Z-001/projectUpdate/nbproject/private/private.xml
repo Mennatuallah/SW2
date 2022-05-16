@@ -2,64 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< Updated upstream
+        <group/>
+=======
         <group>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DisplayAllDoctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/pageOfreceptionist.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/UpdataVisitorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/bed.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Video%20Still_3.png</file>
+            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/receptionist.java</file>
+            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/patient.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/Admin.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DisplayAllDoctor.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/AddNewDoctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/AddNewPatient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Page_of_Patient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/person.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/doctors.jpg</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Page_of_Doctor.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/UpdateNweDoctor.java</file>
+            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/ResidentPatient.java</file>
+            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/ShowAllTimeTabel.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/pageOfpatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/department.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DisplayAllVisitorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Adminfx.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/UpdateNewDoctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/SearchVisitorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DispalyAllPatient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DeletPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/UpdateNewPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Page_of_Patient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/UpdateNewPatient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/SearchONDoctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/AddNewDoctor.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/Doctor.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/VisitorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/pageOfdotor.java</file>
             <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/appointment.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/receptionist.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Adminfx.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DeletDoctor.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Add.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/staff.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/AddNewVisistorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/SearchONPatient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/name.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/y.jpeg</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DisplayAllPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Login1.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/SearchONDoctor.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/fx.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DeletVisitorPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/receptionist.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DeletPatient.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/DeletDoctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/filemanger.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/patient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Page_of_Doctor.css</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/AddNewPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/ResidentPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/scene__s.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/projh/ProjH.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/SearchONPatient.java</file>
-            <file>file:/C:/Users/Mennatuallah/Desktop/SW2_Project_Final/SW2/SW_Project/projectUpdate-20191208T141608Z-001/projectUpdate/src/View/javafxapplication3/Login.java</file>
         </group>
+>>>>>>> Stashed changes
     </open-files>
 </project-private>

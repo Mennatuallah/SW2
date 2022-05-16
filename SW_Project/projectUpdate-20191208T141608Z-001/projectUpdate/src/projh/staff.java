@@ -32,7 +32,7 @@ public abstract class staff extends person implements Serializable {
     }
 
     public String getDeptName() {
-        return this.myDept.getDeptName();
+        return this.myDept.getDepartmentName();
     }
 
     /*•== operator is used to compare the references of the objects.
@@ -41,7 +41,7 @@ public abstract class staff extends person implements Serializable {
     @Override
     public boolean equals(Object o) {
         staff u = (staff) o;
-        return id == u.id && fname.equals(u.fname) && lname.equals(u.lname) && age == u.age && salary == u.salary && myDept.getDeptName().equals(u.myDept.getDeptName());
+        return id == u.id && fname.equals(u.fname) && lname.equals(u.lname) && age == u.age && salary == u.salary && myDept.getDepartmentName().equals(u.myDept.getDepartmentName());
     }
 
     @Override

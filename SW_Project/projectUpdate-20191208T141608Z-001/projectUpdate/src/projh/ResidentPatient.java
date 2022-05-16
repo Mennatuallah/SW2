@@ -139,7 +139,7 @@ public class ResidentPatient extends patient implements Serializable {
                        +"Time : " + Time +"  "
                        +"mybedID : "+ mybedID+"  "
                        +"myroomNumber : "+myroomNumber+"  "
-                       + "Dept: " + myDept.getDeptName() + "  "
+                       + "Dept: " + myDept.getDepartmentName() + "  "
                        +"\nUserName: " + userName + "\t Password: " + pass + "\n";
     }
 
@@ -184,6 +184,11 @@ public class ResidentPatient extends patient implements Serializable {
             }
         }
         return s ;
+    }
+    @Override
+        public void showALLTimeTable(){
+        receptionist r = new receptionist();
+        r.displayALLTimeTable();  
     }
 
 }

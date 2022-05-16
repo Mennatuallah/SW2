@@ -5,7 +5,9 @@
  */
 package View.javafxapplication3;
 
+import static View.javafxapplication3.scene__s.scene1;
 import java.awt.Canvas;
+import static java.awt.SystemColor.window;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -22,6 +24,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import projh.Doctor;
+import projh.patient;
 /**
  *
  * @author الاستاذ
@@ -49,11 +53,10 @@ public class pageOfpatient extends Application {
         b.setLayoutX(200);
         b.setLayoutY(120);
         //?????? ???? ????? ?????
-        // patient pa=new patient();
-        /*b.setOnAction((ActionEvent event) -> {
-        pa.showALLTimeTable();
-        System.out.println(s);
-        });*/
+        Doctor d=new Doctor();
+        b.setOnAction((ActionEvent event) -> {
+        System.out.println(d.displayAllTimeTable());
+        });
         /////Button2///// 
         Button b2=new Button("Show My Report");
         b2.setFont(Font.font("RED",FontWeight.BOLD,30));
@@ -94,6 +97,7 @@ public class pageOfpatient extends Application {
         primaryStage.setTitle("Hospital");
         primaryStage.setScene(scene);
         primaryStage.show();
+        
     }
 
     /**

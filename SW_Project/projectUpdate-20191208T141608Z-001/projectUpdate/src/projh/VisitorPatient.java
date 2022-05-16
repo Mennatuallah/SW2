@@ -130,7 +130,7 @@ public class VisitorPatient extends patient implements Serializable{
                        +" Age : " + age + "  "
                        + "My DR. Name : " + Dfname +" "+Dlname+"  "
                        + "Time : " + Time +"  "
-                       + "Dept: " + myDept.getDeptName() + "\n"
+                       + "Dept: " + myDept.getDepartmentName() + "\n"
                        +"UserName: " + userName + "\t Password: " + pass + "\n";
     }
 

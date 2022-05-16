@@ -145,10 +145,16 @@ public class VisitorPatient extends patient implements Serializable{
         }
         return s ;
     }
-         @Override    
+    @Override    
     public void showALLTimeTable(){
         receptionist r = new receptionist();
         r.displayALLTimeTable();  
+    }
+    @Override
+        public void showMyReport(int id)
+    {
+        appointment a = new appointment();
+        System.out.print(a.dispalyReport(id));      
     }
      
     

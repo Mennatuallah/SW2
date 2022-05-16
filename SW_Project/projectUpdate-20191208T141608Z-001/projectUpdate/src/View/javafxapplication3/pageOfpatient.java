@@ -23,6 +23,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.ResidentPatient;
+import projh.VisitorPatient;
+import projh.person;
 /**
  *
  * @author 
@@ -51,18 +53,20 @@ public class pageOfpatient extends Application {
         b.setLayoutY(120);
         //?????? ???? ????? ?????
                ResidentPatient rp=new ResidentPatient();
+               VisitorPatient vp = new VisitorPatient();
         b.setOnAction((ActionEvent event) -> {
          rp.showALLTimeTable();
+         vp.showALLTimeTable();
         });
         /////Button2///// 
         Button b2=new Button("Show My Report");
         b2.setFont(Font.font("RED",FontWeight.BOLD,30));
         b2.setLayoutX(200);
         b2.setLayoutY(220);
-        //?????? ???? ?????? ??????
-        /*b2.setOnAction((ActionEvent event) -> {
-        pa.showMyReport(int id);
-        });*/       
+        b2.setOnAction((ActionEvent event) -> {
+         rp.showMyReport(rp.id);
+         vp.showMyReport(vp.id);
+        });
         /////Button/////
         Button b3=new Button("EXIT");
         b3.setLayoutX(640);

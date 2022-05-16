@@ -7,7 +7,7 @@ package projh;
 import java.io.Serializable;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class receptionist extends staff implements Serializable{
     
@@ -24,8 +24,8 @@ public class receptionist extends staff implements Serializable{
     
     
      public void displayALLAppoint() {
-        appointment x = new appointment();
-        System.out.println(x.displayAllAppoint());
+        appointment a = new appointment();
+        System.out.println(a.displayAllAppoint());
     }
      
      public void displayALLTimeTable() {
@@ -36,8 +36,8 @@ public class receptionist extends staff implements Serializable{
      
      public void filterAppointment(int dID ,String time)
      {
-         appointment x = new appointment();
-         System.out.println(x.filterApp( dID, time));
+         appointment fa = new appointment();
+         System.out.println(fa.filterApp( dID, time));
      }
      
      public void BookAppForVisitor(int id)
@@ -48,8 +48,8 @@ public class receptionist extends staff implements Serializable{
      
      public void BookAppForResident(int id)
      {
-         ResidentPatient v = new ResidentPatient();
-         v.makeApp(id);
+         ResidentPatient rp = new ResidentPatient();
+         rp.makeApp(id);
      }
      
      
@@ -58,7 +58,7 @@ public class receptionist extends staff implements Serializable{
         return "\nmy name is : " + fname + " " + lname + "\n" 
                        +" ID : "+id +"\n"
                        +" Age : " + age + "\n"
-                       + "\nDept: " + myDept.getDepartmentName() + "\n"
+                       + "\nDept: " + myDept.getDeptName() + "\n"
                        +"\nUserName: " + userName + "\t Password: " + pass + "\n";
     }
     

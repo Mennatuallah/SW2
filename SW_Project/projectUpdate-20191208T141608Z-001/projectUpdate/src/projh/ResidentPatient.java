@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class ResidentPatient extends patient implements Serializable {
     
@@ -50,20 +50,7 @@ public class ResidentPatient extends patient implements Serializable {
         return myroomNumber;
     }
     
-    public void  bookbed(int mybedId,int myroomNumber)
-    {
-        bed b =new bed(mybedId,myroomNumber);
-        if(b.addbed())
-        {
-            System.out.println("added bed Successfully ");
-        }
-        else{
-            System.out.println("Failed to insert ... !");
-        }                    
-        
-    }
-    
-    
+   
     @Override
      public boolean addpatient() {
         loadFromFile();
@@ -86,15 +73,15 @@ public class ResidentPatient extends patient implements Serializable {
     public void makeApp(int id)
     {
         
-        for(ResidentPatient x : rpatients)
+        for(ResidentPatient r : rpatients)
         {
-            if(x.id==id)
+            if(r.id==id)
             {
-                appointment a = new appointment(x.fname,x.lname,x.id,x.Dfname,x.Dlname,x.dID,x.Time);
-                if(a.checkallow(x.dID,x.Time))
+                appointment a = new appointment(r.fname,r.lname,r.id,r.Dfname,r.Dlname,r.dID,r.Time);
+                if(a.checkallow(r.dID,r.Time))
                 {
                    if (a.addappointment()) {
-                   System.out.println(x.toString() + "Added Appointment Successfully ... !");
+                   System.out.println(r.toString() + "Added Appointment Successfully ... !");
                    } else  {
                    System.out.println("Failed to insert ... !");
                    }
@@ -139,7 +126,7 @@ public class ResidentPatient extends patient implements Serializable {
                        +"Time : " + Time +"  "
                        +"mybedID : "+ mybedID+"  "
                        +"myroomNumber : "+myroomNumber+"  "
-                       + "Dept: " + myDept.getDepartmentName() + "  "
+                       + "Dept: " + myDept.getDeptName() + "  "
                        +"\nUserName: " + userName + "\t Password: " + pass + "\n";
     }
 
@@ -184,11 +171,6 @@ public class ResidentPatient extends patient implements Serializable {
             }
         }
         return s ;
-    }
-    @Override
-        public void showALLTimeTable(){
-        receptionist r = new receptionist();
-        r.displayALLTimeTable();  
     }
 
 }

@@ -27,7 +27,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class Adminfx extends Application {
     

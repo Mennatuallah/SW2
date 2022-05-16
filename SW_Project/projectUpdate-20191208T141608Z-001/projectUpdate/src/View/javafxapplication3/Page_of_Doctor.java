@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class Page_of_Doctor extends Application {
     

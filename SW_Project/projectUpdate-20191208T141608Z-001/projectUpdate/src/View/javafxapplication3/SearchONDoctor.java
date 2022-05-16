@@ -20,7 +20,7 @@ import projh.Doctor;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class SearchONDoctor extends Application {
     

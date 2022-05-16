@@ -37,7 +37,7 @@ import projh.person;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class AddNewDoctor extends Application {
     

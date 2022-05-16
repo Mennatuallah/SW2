@@ -22,7 +22,7 @@ import projh.ResidentPatient;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class DeletPatient extends Application {
     

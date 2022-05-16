@@ -172,5 +172,10 @@ public class ResidentPatient extends patient implements Serializable {
         }
         return s ;
     }
+    @Override    
+    public void showALLTimeTable(){
+        receptionist r = new receptionist();
+        r.displayALLTimeTable();  
+    }
 
 }

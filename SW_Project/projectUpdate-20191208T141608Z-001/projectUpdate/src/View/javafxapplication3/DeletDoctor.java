@@ -23,7 +23,7 @@ import projh.Doctor;
 
 /**
  *
- * @author Mohamed GH
+ * @author 
  */
 public class DeletDoctor extends Application {
     

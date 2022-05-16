@@ -28,7 +28,7 @@ import projh.ProjH;
 
 /**
  *
- * @author Mohamed GH
+ * @author
  */
 public class UpdateNweDoctor extends Application {
     

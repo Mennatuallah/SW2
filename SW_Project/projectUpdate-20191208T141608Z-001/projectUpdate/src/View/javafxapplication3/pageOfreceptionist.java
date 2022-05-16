@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author الاستاذ
+ * @author 
  */
 public class pageOfreceptionist extends Application {
     

@@ -43,7 +43,7 @@ public class Doctor extends staff implements Serializable {
         return commitToFile();
     }
     
-    String displayAllTimeTable() {
+  public  String displayAllTimeTable() {
         loadFromFile();
         String S = "\nAll timetable Data:\n";
         for (Doctor x : doctors) {
@@ -143,7 +143,7 @@ public class Doctor extends staff implements Serializable {
         return "\nmy name is : " + fname + " " + lname + "  " 
                        +" ID : "+id +"  "
                        +" Age : " + age + "  "
-                       + "Dept: " + myDept.getDeptName() + "  "
+                       + "Dept: " + myDept.getDepartmentName() + "  "
                        +"UserName: " + userName + " Password: " + pass + "\n";
     }
     

@@ -58,7 +58,7 @@ public class receptionist extends staff implements Serializable{
         return "\nmy name is : " + fname + " " + lname + "\n" 
                        +" ID : "+id +"\n"
                        +" Age : " + age + "\n"
-                       + "\nDept: " + myDept.getDeptName() + "\n"
+                       + "\nDept: " + myDept.getDepartmentName() + "\n"
                        +"\nUserName: " + userName + "\t Password: " + pass + "\n";
     }
     

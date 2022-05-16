@@ -5,10 +5,7 @@
  */
 package projh;
 
-/**
- *
- * @author الاستاذ
- */
+
 public class Admin extends staff {
      public Admin() {
 
@@ -148,7 +145,7 @@ public class Admin extends staff {
 
     @Override
        public String toString() {
-        return "I'm Manager : " + fname + " " + lname + "\n" + "ID : " + id + " Age : " + age + " Salary : " + salary + "\n" + "Dept. : " + myDept.getDeptName() + "\nUserName: " + userName + "\t Password: " + pass + "\n";
+        return "I'm Manager : " + fname + " " + lname + "\n" + "ID : " + id + " Age : " + age + " Salary : " + salary + "\n" + "Dept. : " + myDept.getDepartmentName() + "\nUserName: " + userName + "\t Password: " + pass + "\n";
     }
 
     

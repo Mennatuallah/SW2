@@ -105,6 +105,28 @@ public class Login extends Application {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
+                               else if(tf.getText().equals("Doctor")&&pf.getText().equals("1234")){
+                    primaryStage.close();
+                    pageOfdotor DoctorPage = new pageOfdotor();
+                    try {
+                        Stage s = new Stage();
+                        DoctorPage.start(s);
+
+                    } catch (Exception ex) {
+                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                               else if(tf.getText().equals("Staff")&&pf.getText().equals("12345")){
+                    primaryStage.close();
+                    pageOfreceptionist StaffPage = new pageOfreceptionist();
+                    try {
+                        Stage s = new Stage();
+                        StaffPage.start(s);
+
+                    } catch (Exception ex) {
+                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
                 else{
                     actiontarget.setFill(Color.CADETBLUE);
                     actiontarget.setText("Invalid Username and Password!");

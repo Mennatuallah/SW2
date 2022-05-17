@@ -177,50 +177,50 @@ public class UpdateNweDoctor extends Application {
                     String n6 = timen.getText();
                     String n7 = specn.getText();
 
-                    k.setFName(fn.getText());
+                    k.setFirstName(fn.getText());
                     k.setID(y);
-                    k.setLName(ln.getText());
+                    k.setlastName(ln.getText());
                     k.setAge(i);
                     k.setUserName(emailn.getText());
-                    k.setPass(passn.getText());
+                    k.setPassword(passn.getText());
                     k.setTimeTable(timen.getText());
-                    k.setDept(ProjH.Surgery);
+                    k.setDepartment(ProjH.Surgery);
 
                     if (r1.isSelected()) {
                         x.updateDoctor(n, k);
                     } else if (r2.isSelected()) {
 
-                        k.setFName(fn.getText());
+                        k.setFirstName(fn.getText());
                         k.setID(y);
-                        k.setLName(ln.getText());
+                        k.setlastName(ln.getText());
                         k.setAge(i);
                         k.setUserName(emailn.getText());
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setTimeTable(timen.getText());
-                        k.setDept(ProjH.Surgery);
+                        k.setDepartment(ProjH.Surgery);
 
                         x.updateDoctor(n, k);
 
                     } else if (r3.isSelected()) {
-                        k.setFName(fn.getText());
+                        k.setFirstName(fn.getText());
                         k.setID(y);
-                        k.setLName(ln.getText());
+                        k.setlastName(ln.getText());
                         k.setAge(i);
                         k.setUserName(emailn.getText());
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setTimeTable(timen.getText());
-                        k.setDept(ProjH.Surgery);
+                        k.setDepartment(ProjH.Surgery);
 
                         x.updateDoctor(n, k);
                     } else if (r4.isSelected()) {
-                        k.setFName(fn.getText());
+                        k.setFirstName(fn.getText());
                         k.setID(y);
-                        k.setLName(ln.getText());
+                        k.setlastName(ln.getText());
                         k.setAge(i);
                         k.setUserName(emailn.getText());
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setTimeTable(timen.getText());
-                        k.setDept(ProjH.Surgery);
+                        k.setDepartment(ProjH.Surgery);
                         x.updateDoctor(n, k);
                     }
 

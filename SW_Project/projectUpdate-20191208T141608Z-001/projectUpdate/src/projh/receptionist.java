@@ -14,49 +14,49 @@ public class receptionist extends staff implements Serializable{
 
     }
 
-    public receptionist(String user, String pass, int id, String fname, String lname, int age, double salary, department dept) {
-        super(user, pass, id, fname, lname, age, salary, dept);
+    public receptionist(String user, String password, int id, String firstName, String LastName, int age, double salary, department Department) {
+        super(user, password, id, firstName, LastName, age, salary, Department);
     }
     
     
     
      public void displayALLAppoint() {
-        appointment a = new appointment();
-        System.out.println(a.displayAllAppoint());
+        appointment AllAppointment = new appointment();
+        System.out.println(AllAppointment.displayAllAppoint());
     }
      
      public void displayALLTimeTable() {
-        Doctor x = new Doctor();
-        System.out.println(x.displayAllTimeTable());
+        Doctor TimeTable = new Doctor();
+        System.out.println(TimeTable.displayAllTimeTable());
     }
      
      
-     public void filterAppointment(int dID ,String time)
+     public void filterAppointment(int doctorID ,String time)
      {
-         appointment fa = new appointment();
-         System.out.println(fa.filterApp( dID, time));
+         appointment filterAppointment = new appointment();
+         System.out.println(filterAppointment.filterApp(doctorID, time));
      }
      
      public void BookAppForVisitor(int id)
      {
-         VisitorPatient v = new VisitorPatient();
-         v.makeApp(id);
+         VisitorPatient bookAppointmentVisitor = new VisitorPatient();
+         bookAppointmentVisitor.makeApp(id);
      }
      
      public void BookAppForResident(int id)
      {
-         ResidentPatient rp = new ResidentPatient();
-         rp.makeApp(id);
+         ResidentPatient bookAppointmentResident = new ResidentPatient();
+         bookAppointmentResident.makeApp(id);
      }
      
      
     @Override
     public String toString() {
-        return "\nmy name is : " + fname + " " + lname + "\n" 
+        return "\nmy name is : " + firstName + " " + lastName + "\n" 
                        +" ID : "+id +"\n"
                        +" Age : " + age + "\n"
-                       + "\nDept: " + myDept.getDeptName() + "\n"
-                       +"\nUserName: " + userName + "\t Password: " + pass + "\n";
+                       + "\nDept: " + myDepartment.getDepartmentName() + "\n"
+                       +"\nUserName: " + userName + "\t Password: " + password + "\n";
     }
     
 }

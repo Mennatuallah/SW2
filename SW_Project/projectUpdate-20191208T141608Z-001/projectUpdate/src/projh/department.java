@@ -8,8 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class department implements Serializable {
-    private String DeptID;
-    private String DeptName;
+    private String DepartmentID;
+    private String DepartmentName;
     filemanger FManger = new filemanger();
     private final String DeptFileName = "./Department.bin";
     public static ArrayList<department> departments = new ArrayList<department>();
@@ -19,26 +19,26 @@ public class department implements Serializable {
 
     }
 
-    public department(String DeptID, String DeptName) {
-        this.DeptID = DeptID;
-        this.DeptName = DeptName;
+    public department(String DepartmentID, String DepartmentName) {
+        this.DepartmentID = DepartmentID;
+        this.DepartmentName = DepartmentName;
     }
 
-    public void setDeptID(String DeptID) {
-        this.DeptID = DeptID;
+    public void setDeptID(String DepartmentID) {
+        this.DepartmentID = DepartmentID;
     }
 
-    public void setDeptName(String DeptName) {
-        this.DeptName = DeptName;
+    public void setDeptName(String DepartmentName) {
+        this.DepartmentName = DepartmentName;
     }
 
 
-    public String getDeptID() {
-        return this.DeptID;
+    public String getDepartmentID() {
+        return this.DepartmentID;
     }
 
-    public String getDeptName() {
-        return this.DeptName;
+    public String getDepartmentName() {
+        return this.DepartmentName;
     }
 
 
@@ -59,6 +59,6 @@ public class department implements Serializable {
 
     @Override
     public String toString() {
-        return "Dept Name : " + DeptName + "\n";
+        return "Department Name : " + DepartmentName + "\n";
     }
 }

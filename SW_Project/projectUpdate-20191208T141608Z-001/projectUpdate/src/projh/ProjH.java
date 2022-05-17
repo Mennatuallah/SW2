@@ -50,42 +50,42 @@ public class ProjH extends Application {
    
     public static void checkDirectoryContents(File dir){
         File[] files = dir.listFiles();
-        boolean vpatientFile = true;
+        boolean visitorPatientFile = true;
         boolean appFile = true;
         boolean doctorFile = true;
-        boolean rpatientFile = true;
+        boolean residentPatientFile = true;
         
 
         for (File file : files) {
 
             if (file.getName().contains("vpatints.bin")) {
-                vpatientFile = false;
+                visitorPatientFile = false;
             } else  if (file.getName().contains("app.bin")) {
                 appFile = false;
             } else if (file.getName().contains("Doc.bin")) {
                 doctorFile = false;
             } else if (file.getName().contains("rpatients.bin")) {
-                rpatientFile = false;
+                residentPatientFile = false;
             }
         }
-        if (vpatientFile) {
-            VisitorPatient x = new VisitorPatient();
-            x.commitToFile();
+        if (visitorPatientFile) {
+            VisitorPatient visitor_patient = new VisitorPatient();
+            visitor_patient.commitToFile();
         } 
         
         if (appFile) {
-            appointment x = new appointment();
-            x.commitToFile();
+            appointment Appointment = new appointment();
+            Appointment.commitToFile();
         } 
         
         if (doctorFile) {
-            Doctor x = new Doctor();
-            x.commitToFile();
+            Doctor doctor = new Doctor();
+            doctor.commitToFile();
         } 
         
-        if (rpatientFile) {
-            ResidentPatient x = new ResidentPatient();
-            x.commitToFile();
+        if (residentPatientFile) {
+            ResidentPatient resident_patient = new ResidentPatient();
+            resident_patient.commitToFile();
         } 
         
       

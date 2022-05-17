@@ -13,11 +13,11 @@ public abstract class staff extends person implements Serializable {
     public staff() {
     }
 
-    public staff(String user, String pass, int id, String fname, String lname, int age, double salary, department dept) {
-        super(user, pass, id, fname, lname, age, dept);
+    public staff(String user, String password, int id, String firstName, String lastName, int age, double salary, department Department) {
+        super(user, password, id, firstName, lastName, age, Department);
 
         this.salary = salary;
-        this.myDept = dept;
+        this.myDepartment = Department;
     }
 
     public void setSalary(double salary) {
@@ -28,15 +28,15 @@ public abstract class staff extends person implements Serializable {
         return this.salary;
     }
 
-    public String getDeptName() {
-        return this.myDept.getDeptName();
+    public String getDepartmentName() {
+        return this.myDepartment.getDepartmentName();
     }
 
     
     @Override
     public boolean equals(Object o) {
         staff u = (staff) o;
-        return id == u.id && fname.equals(u.fname) && lname.equals(u.lname) && age == u.age && salary == u.salary && myDept.getDeptName().equals(u.myDept.getDeptName());
+        return id == u.id && firstName.equals(u.firstName) && lastName.equals(u.lastName) && age == u.age && salary == u.salary && myDepartment.getDepartmentName().equals(u.myDepartment.getDepartmentName());
     }
 
     @Override

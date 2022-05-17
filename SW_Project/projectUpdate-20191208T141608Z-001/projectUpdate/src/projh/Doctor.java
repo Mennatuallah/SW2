@@ -44,7 +44,7 @@ public class Doctor extends staff implements Serializable {
         loadFromFile();
         String S = "\nAll timetable Data:\n";
         for (Doctor x : doctors) {
-            S = S + x.fname + "  " +x.lname+"  "+x.timetable +"\n";
+            S = S + x.firstName + "  " +x.lastName+"  "+x.timetable +"\n";
         }
         return S;
     }
@@ -137,11 +137,11 @@ public class Doctor extends staff implements Serializable {
 
     @Override
     public String toString() {
-        return "\nmy name is : " + fname + " " + lname + "  " 
+        return "\nmy name is : " + firstName + " " + lastName + "  " 
                        +" ID : "+id +"  "
                        +" Age : " + age + "  "
-                       + "Dept: " + myDept.getDeptName() + "  "
-                       +"UserName: " + userName + " Password: " + pass + "\n";
+                       + "Dept: " + myDepartment.getDepartmentName() + "  "
+                       +"UserName: " + userName + " Password: " + password + "\n";
     }
     
 }

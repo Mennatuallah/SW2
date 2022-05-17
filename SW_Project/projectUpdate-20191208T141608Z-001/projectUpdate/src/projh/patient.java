@@ -8,11 +8,11 @@ import java.io.Serializable;
 
 public abstract class patient extends person implements Serializable  {
     protected String Time ;
-    protected String Mhistory ;
-    protected String Dfname;
-    protected String Dlname;
-    protected int dID;
-    protected String myMassage; 
+    protected String MessageHistory ;
+    protected String DoctorFirstName;
+    protected String DoctorLastName;
+    protected int doctorID;
+    protected String myMessage; 
     
     
     
@@ -30,14 +30,14 @@ public abstract class patient extends person implements Serializable  {
         
     }
     
-    public patient(String user, String pass, int id, String fname, String lname, int age, String Mhistory, String Time,String Dfname,String Dlname,int dID,department dept)
+    public patient(String user, String password, int id, String firstname, String lastName, int age, String messageHistory, String Time,String doctorFirstName,String doctorLastName,int doctorID,department Department)
     {
-        super(user, pass, id, fname, lname, age, dept);
+        super(user, password, id, firstname, lastName, age, Department);
         this.Time=Time;
-        this.Mhistory=Mhistory;
-        this.Dfname=Dfname;
-        this.Dlname=Dlname;
-        this.dID=dID;
+        this.MessageHistory=messageHistory;
+        this.DoctorFirstName=doctorFirstName;
+        this.DoctorLastName=doctorLastName;
+        this.doctorID=doctorID;
     }
     
     public void setTime(String Time)
@@ -45,20 +45,20 @@ public abstract class patient extends person implements Serializable  {
         this.Time=Time;
     }
     
-    public void setMhistory(String Mhistory)
+    public void setMessageHistory(String MessageHistory)
     {
-        this.Mhistory=Mhistory;
+        this.MessageHistory=MessageHistory;
     }
     
-    public void setDfname(String Dfname)
+    public void setDoctorFirstName(String DoctorFirstName)
     {
-        this.Dfname=Dfname;
+        this.DoctorFirstName=DoctorFirstName;
     }
 
     
-     public void setDlname(String Dlname)
+     public void setDoctorLastName(String DoctorLastName)
     {
-        this.Dlname=Dlname;
+        this.DoctorLastName=DoctorLastName;
     }
      
      
@@ -66,7 +66,7 @@ public abstract class patient extends person implements Serializable  {
     
        public void setdID(int dID)
     {
-        this.dID=dID;
+        this.doctorID=dID;
     }  
 
        
@@ -79,38 +79,38 @@ public abstract class patient extends person implements Serializable  {
         return this.Time;
     }
     
-    public String getMhistory()
+    public String getMessageHistory()
     {
-        return this.Mhistory;
+        return this.MessageHistory;
     }  
     
-    public String getDfname()
+    public String getDoctorFirstName()
     {
-        return this.Dfname;
+        return this.DoctorFirstName;
     }   
     
     
-    public String setDlname()
+    public String setDoctorLastName()
     {
-       return this.Dlname;
+       return this.DoctorLastName;
     }  
     
 
-    public int setdID()
+    public int setDoctorID()
     {
-        return this.dID;
+        return this.doctorID;
     }   
    
     
     public void showALLTimeTable(){
-        receptionist r = new receptionist();
-        r.displayALLTimeTable();  
+        receptionist timeTable = new receptionist();
+        timeTable.displayALLTimeTable();  
     }
     
     public void showMyReport(int id)
     {
-        appointment a = new appointment();
-        System.out.print(a.dispalyReport(id));      
+        appointment Report = new appointment();
+        System.out.print(Report.dispalyReport(id));      
     }
     
     

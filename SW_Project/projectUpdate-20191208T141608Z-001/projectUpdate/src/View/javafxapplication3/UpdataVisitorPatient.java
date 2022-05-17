@@ -175,65 +175,65 @@ public class UpdataVisitorPatient extends Application {
                     String n4 = diseasen.getText();
                     String n6 = timen.getText();
 
-                    k.setPass(passn.getText());
+                    k.setPassword(passn.getText());
                     k.setUserName(usernamen.getText());
                     k.setdID(b);
-                    k.setDfname(dfnamen.getText());
+                    k.setDoctorFirstName(dfnamen.getText());
                     k.setID(y);
-                    k.setDlname(dlnamen.getText());
+                    k.setDoctorLastName(dlnamen.getText());
                     k.setAge(i);
-                    k.setMhistory(diseasen.getText());
+                    k.setMessageHistory(diseasen.getText());
                     k.setTime(timen.getText());
-                    k.setFName(fn.getText());
-                    k.setLName(ln.getText());
-                    k.setDept(ProjH.Surgery);
+                    k.setFirstName(fn.getText());
+                    k.setlastName(ln.getText());
+                    k.setDepartment(ProjH.Surgery);
 
                     if (r1.isSelected()) {
 
                         x.updateVisitorPatient(n, k);
                     } else if (r2.isSelected()) {
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setUserName(usernamen.getText());
                         k.setdID(b);
-                        k.setDfname(dfnamen.getText());
+                        k.setDoctorFirstName(dfnamen.getText());
                         k.setID(y);
-                        k.setDlname(dlnamen.getText());
+                        k.setDoctorLastName(dlnamen.getText());
                         k.setAge(i);
-                        k.setMhistory(diseasen.getText());
+                        k.setMessageHistory(diseasen.getText());
                         k.setTime(timen.getText());
-                        k.setFName(fn.getText());
-                        k.setLName(ln.getText());
-                        k.setDept(ProjH.the_Heart);
+                        k.setFirstName(fn.getText());
+                        k.setlastName(ln.getText());
+                        k.setDepartment(ProjH.the_Heart);
                         x.updateVisitorPatient(n, k);
 
                     } else if (r3.isSelected()) {
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setUserName(usernamen.getText());
                         k.setdID(b);
-                        k.setDfname(dfnamen.getText());
+                        k.setDoctorFirstName(dfnamen.getText());
                         k.setID(y);
-                        k.setDlname(dlnamen.getText());
+                        k.setDoctorLastName(dlnamen.getText());
                         k.setAge(i);
-                        k.setMhistory(diseasen.getText());
+                        k.setMessageHistory(diseasen.getText());
                         k.setTime(timen.getText());
-                        k.setFName(fn.getText());
-                        k.setLName(ln.getText());
-                        k.setDept(ProjH.the_belly);
+                        k.setFirstName(fn.getText());
+                        k.setlastName(ln.getText());
+                        k.setDepartment(ProjH.the_belly);
 
                         x.updateVisitorPatient(n, k);
                     } else if (r4.isSelected()) {
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setUserName(usernamen.getText());
                         k.setdID(b);
-                        k.setDfname(dfnamen.getText());
+                        k.setDoctorFirstName(dfnamen.getText());
                         k.setID(y);
-                        k.setDlname(dlnamen.getText());
+                        k.setDoctorLastName(dlnamen.getText());
                         k.setAge(i);
-                        k.setMhistory(diseasen.getText());
+                        k.setMessageHistory(diseasen.getText());
                         k.setTime(timen.getText());
-                        k.setFName(fn.getText());
-                        k.setLName(ln.getText());
-                        k.setDept(ProjH.Bones);
+                        k.setFirstName(fn.getText());
+                        k.setlastName(ln.getText());
+                        k.setDepartment(ProjH.Bones);
                         x.updateVisitorPatient(n, k);
                     }
 

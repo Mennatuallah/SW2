@@ -6,12 +6,12 @@
 package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
-import static projh.ResidentPatient.rpatients;
+import static projh.ResidentPatient.residentPatients;
 
 public class bed implements Serializable{
     
     protected int id;
-    protected int numberofroom;
+    protected int numberOfRoom;
     private final String BedFileName = "bed.bin";
     public static ArrayList<bed> beds = new ArrayList<bed>();
     filemanger FManger = new filemanger();
@@ -21,9 +21,9 @@ public class bed implements Serializable{
     }
     
     
-    public bed(int id ,int numberofroom){
+    public bed(int id ,int numberOfRoom){
         this.id=id;
-        this.numberofroom=numberofroom;               
+        this.numberOfRoom=numberOfRoom;               
     }
     
     
@@ -42,10 +42,10 @@ public class bed implements Serializable{
         return FManger.write(BedFileName,beds);
     }
     
-    public static void  bookbed(int mybedId,int myroomNumber)
+    public static void  bookbed(int myBedId,int myRoomNumber)
     {
-        bed b =new bed(mybedId,myroomNumber);
-        if(b.addbed())
+        bed beds =new bed(myBedId,myRoomNumber);
+        if(beds.addbed())
         {
             System.out.println("added bed Successfully ");
         }

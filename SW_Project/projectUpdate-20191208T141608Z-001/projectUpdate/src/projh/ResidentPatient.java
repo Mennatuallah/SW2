@@ -11,69 +11,69 @@ import java.util.logging.Logger;
 public class ResidentPatient extends patient implements Serializable {
     
   
-    protected int mybedID;
-    protected int myroomNumber;
-    private final String rPatientFileName = "rpatients.bin";
-    public static ArrayList<ResidentPatient> rpatients = new ArrayList<ResidentPatient>();
+    protected int myBedID;
+    protected int myRoomNumber;
+    private final String residentPatientFileName = "rpatients.bin";
+    public static ArrayList<ResidentPatient> residentPatients = new ArrayList<ResidentPatient>();
     
     
     public ResidentPatient(){
         
     }
     
-    public ResidentPatient(String user, String pass, int id, String fname, String lname, int age, String Mhistory, String Time,String Dfname,String Dlname,int dID,department dept,int mybedID,int myroomNumber)
+    public ResidentPatient(String user, String password, int id, String firstName, String lastName, int age, String MessageHistory, String Time,String DoctorFirstName,String DoctorLastName,int doctorID,department department,int myBedID,int myRoomNumber)
     {
-        super(user,pass,id,fname,lname,age,Mhistory,Time,Dfname,Dlname,dID,dept);
-        this.mybedID=mybedID;
-        this.myroomNumber=myroomNumber;
+        super(user,password,id,firstName,lastName,age,MessageHistory,Time,DoctorFirstName,DoctorLastName,doctorID,department);
+        this.myBedID=myBedID;
+        this.myRoomNumber=myRoomNumber;
         
     }
 
-    public void setMybedID(int mybedID) {
-        this.mybedID = mybedID;
+    public void setMyBedID(int myBedID) {
+        this.myBedID = myBedID;
     }
 
-    public void setMyroomNumber(int myroomNumber) {
-        this.myroomNumber = myroomNumber;
+    public void setMyRoomNumber(int myRoomNumber) {
+        this.myRoomNumber = myRoomNumber;
     }
 
-    public int getMybedID() {
-        return mybedID;
+    public int getMyBedID() {
+        return myBedID;
     }
 
-    public int getMyroomNumber() {
-        return myroomNumber;
+    public int getMyRoomNumber() {
+        return myRoomNumber;
     }
     
    
     @Override
      public boolean addpatient() {
         loadFromFile();
-        rpatients.add(this);
+        residentPatients.add(this);
         return commitToFile();
     }
      
       @Override
       public void loadFromFile() {
-          if(FManger.read(rPatientFileName)!=null)
-             rpatients = (ArrayList<ResidentPatient>) FManger.read(rPatientFileName);
+          if(FManger.read(residentPatientFileName)!=null)
+             residentPatients = (ArrayList<ResidentPatient>) FManger.read(residentPatientFileName);
     }
       
      @Override
      public boolean commitToFile() {
-        return FManger.write(rPatientFileName,rpatients);
+        return FManger.write(residentPatientFileName,residentPatients);
     }
      
     @Override
     public void makeApp(int id)
     {
         
-        for(ResidentPatient r : rpatients)
+        for(ResidentPatient r : residentPatients)
         {
             if(r.id==id)
             {
-                appointment a = new appointment(r.fname,r.lname,r.id,r.Dfname,r.Dlname,r.dID,r.Time);
-                if(a.checkallow(r.dID,r.Time))
+                appointment a = new appointment(r.firstName,r.lastName,r.id,r.DoctorFirstName,r.DoctorLastName,r.doctorID,r.Time);
+                if(a.checkallow(r.doctorID,r.Time))
                 {
                    if (a.addappointment()) {
                    System.out.println(r.toString() + "Added Appointment Successfully ... !");
@@ -93,7 +93,7 @@ public class ResidentPatient extends patient implements Serializable {
         loadFromFile();
         int index = getPatientIndex(id);
         if (index != -1) {
-            rpatients.remove(index);
+            residentPatients.remove(index);
             return commitToFile();
         }
         return false;
@@ -105,7 +105,7 @@ public class ResidentPatient extends patient implements Serializable {
         loadFromFile();
         int index = getPatientIndex(oldID);
         if (index != -1) {
-            rpatients.set(index, x);
+            residentPatients.set(index, x);
             return commitToFile();
         }
         return false;  
@@ -114,15 +114,15 @@ public class ResidentPatient extends patient implements Serializable {
     
     @Override
     public String toString() {
-               return "\nmy name is : " + fname + " " + lname + "  " 
+               return "\nmy name is : " + firstName + " " + lastName + "  " 
                        +" ID : "+id +"  "
                        +" Age : " + age + "  "
-                       +"my DR Name : " + Dfname +" "+Dlname+"\n"
+                       +"my DR Name : " + DoctorFirstName +" "+DoctorLastName+"\n"
                        +"Time : " + Time +"  "
-                       +"mybedID : "+ mybedID+"  "
-                       +"myroomNumber : "+myroomNumber+"  "
-                       + "Dept: " + myDept.getDeptName() + "  "
-                       +"\nUserName: " + userName + "\t Password: " + pass + "\n";
+                       +"mybedID : "+ myBedID+"  "
+                       +"myroomNumber : "+myRoomNumber+"  "
+                       + "Dept: " + myDepartment.getDepartmentName() + "  "
+                       +"\nUserName: " + userName + "\t Password: " + password + "\n";
     }
 
     @Override
@@ -130,7 +130,7 @@ public class ResidentPatient extends patient implements Serializable {
         loadFromFile();
         int index = getPatientIndex(id);
         if (index != -1) {
-            return "\nFound ...!" + rpatients.get(index).toString();
+            return "\nFound ...!" + residentPatients.get(index).toString();
         } else {
             return null;
         }
@@ -139,17 +139,17 @@ public class ResidentPatient extends patient implements Serializable {
     @Override
     public String displayAllPatient() {
        loadFromFile();
-        String S = "\nAll ResidentPatient Data:\n";
-        for (ResidentPatient x : rpatients) {
-            S = S + x.toString();
+        String allResidentPatients = "\nAll ResidentPatient Data:\n";
+        for (ResidentPatient x : residentPatients) {
+            allResidentPatients = allResidentPatients + x.toString();
         }
-        return S;
+        return allResidentPatients;
     }
     
     @Override
     protected int getPatientIndex(int id) {
-        for (int i = 0; i < rpatients.size(); i++) {
-            if (rpatients.get(i).getID() == id) {
+        for (int i = 0; i < residentPatients.size(); i++) {
+            if (residentPatients.get(i).getID() == id) {
                 return i;
             }
         }
@@ -158,24 +158,24 @@ public class ResidentPatient extends patient implements Serializable {
 
     @Override
     public String dispalyMHistory(int id) {
-        String s = "\n your Report :";
-        for(ResidentPatient x : rpatients)
+        String messageHistory = "\n your Report :";
+        for(ResidentPatient x : residentPatients)
         {
             if(x.id==id){ 
-                s= s + x.Mhistory ;             
+                messageHistory= messageHistory + x.MessageHistory ;             
             }
         }
-        return s ;
+        return messageHistory ;
     }
     @Override    
     public void showALLTimeTable(){
-        receptionist r = new receptionist();
-        r.displayALLTimeTable();  
+        receptionist timeTable = new receptionist();
+        timeTable.displayALLTimeTable();  
     }
     @Override
         public void showMyReport(int id)
     {
-        appointment a = new appointment();
-        System.out.print(a.dispalyReport(id));      
+        appointment myReport = new appointment();
+        System.out.print(myReport.dispalyReport(id));      
     }
 }

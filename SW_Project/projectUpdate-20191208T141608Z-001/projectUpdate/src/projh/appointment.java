@@ -8,16 +8,16 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class appointment implements Serializable{
+   
     
-    
-    protected String pfname ;
-    protected String plname ;   
-    protected int pID;
-    protected String dfname ;
-    protected String dlname;
-    protected int dID;
+    protected String patientFirstName ;
+    protected String patientLastName ;   
+    protected int patientID;
+    protected String doctorFirstName ;
+    protected String doctorLastName;
+    protected int doctorID;
     protected String time ;
-    protected ArrayList<String> massage =new ArrayList<String>() ;
+    protected ArrayList<String> message =new ArrayList<String>() ;
     protected String report ;
     protected boolean approve ;
     private final String Appfilename  = "app.bin" ;
@@ -29,13 +29,13 @@ public class appointment implements Serializable{
     }   
     
     
-    public appointment(String pfname,String plname,int pID,String dfname,String dlname,int dID,String time ){
-        this.pfname=pfname;
-        this.plname=plname;
-        this.pID=pID;
-        this.dfname=dfname;
-        this.dlname=dlname;
-        this.dID=dID;        
+    public appointment(String patientFirstName,String patientLastName,int patientID,String doctorFirstName,String doctorLastName,int doctorID,String time ){
+        this.patientFirstName=patientFirstName;
+        this.patientLastName=patientLastName;
+        this.patientID=patientID;
+        this.doctorFirstName=doctorFirstName;
+        this.doctorLastName=doctorLastName;
+        this.doctorID=doctorID;        
         this.time=time;       
         this.report="  ";
         this.approve=false; 
@@ -50,18 +50,18 @@ public class appointment implements Serializable{
         this.time=time;
     }
     
-    public void setpfname(String pfname)
+    public void setPatientFirstName(String pfname)
     {
-        this.pfname=pfname;
+        this.patientFirstName=pfname;
     }
-     public void setplname(String plname)
+     public void setPatientLastName(String plname)
     {
-        this.plname=plname;
+        this.patientLastName=plname;
     }
     
-    public void setdfname(String dfname)
+    public void setDoctorFirstName(String dfname)
     {
-        this.dfname=dfname;
+        this.doctorFirstName=dfname;
     }
     
     
@@ -75,46 +75,46 @@ public class appointment implements Serializable{
         return this.time;
     }
     
-    public String getpfname()
+    public String getPatientFirstName()
     {
-        return this.pfname;
+        return this.patientFirstName;
     }
     
-    public String getplname()
+    public String getPatientLastName()
     {
-        return this.plname;
+        return this.patientLastName;
     }
     
-    public String getdfname()
+    public String getDoctorFirstName()
     {
-        return this.dfname;
+        return this.doctorFirstName;
     }
     
     
-    public String filterApp(int dID,String Time)
+    public String filterApp(int doctorID,String Time)
     {
         loadFromFile();
-        String S ="Appointments of DR \n";
+        String FillterAppointment ="Appointments of DR \n";
         for(appointment x : appointments)
         {
-            if(x.dID==dID && x.time.equals(Time))
+            if(x.doctorID==doctorID && x.time.equals(Time))
             {                
-                 S = S + x.toString();
+                 FillterAppointment = FillterAppointment + x.toString();
             }            
         }   
-        return S ;
+        return FillterAppointment ;
     }
     
     
     
      
-    boolean checkallow(int dID,String Time)
+    boolean checkallow(int doctorID,String Time)
     {
         loadFromFile();
         int c =0;
         for(appointment x : appointments)
         {
-            if(x.dID==dID && x.time.equals(Time))
+            if(x.doctorID==doctorID && x.time.equals(Time))
             {                
                 c++;
             }            
@@ -123,12 +123,12 @@ public class appointment implements Serializable{
     }
     
     
-    public void addReport(int dID,int pID,String report)
+    public void addReport(int doctorID,int patientID,String report)
     {
         loadFromFile();
         for(appointment x: appointments)
         {
-            if(x.dID==dID && x.pID==pID)
+            if(x.doctorID==doctorID && x.patientID==patientID)
             {
                 x.report=report;
                 commitToFile();
@@ -153,33 +153,33 @@ public class appointment implements Serializable{
      
     public String displayAllAppoint() {
         loadFromFile();
-        String S = "\nAll appointment Data:\n";
+        String appointmentData = "\nAll appointment Data:\n";
         for (appointment x : appointments) {
-            S = S + x.toString();
+            appointmentData = appointmentData + x.toString();
         }
-        return S;
+        return appointmentData;
     }
     
     public String dispalyReport(int id)
     {
-        String s = "\n your Report :";
+        String report = "\n your Report :";
         for(appointment x : appointments)
         {
-            if(x.pID==id){ 
-                s= s + x.report ;              
+            if(x.patientID==id){ 
+                report= report + x.report ;              
                 
             }
         }
-        return s ;
+        return report ;
     }
     
     
-    public void approve(int pid,int dID)
+    public void approve(int patientID,int doctorID)
     {
         loadFromFile();
         for(appointment x : appointments )
         {
-            if(x.pID==pid && x.dID==dID)
+            if(x.patientID==patientID && x.doctorID==doctorID)
             {
                 x.approve=true;
             }
@@ -188,10 +188,10 @@ public class appointment implements Serializable{
     
     @Override
         public String toString() {
-        return "\n name of patient : " + pfname + " " + plname + "\n"
-                + "name of doctor : " + dfname + " "+dlname +"\n"
+        return "\n name of patient : " + patientFirstName + " " + patientLastName + "\n"
+                + "name of doctor : " + doctorFirstName + " "+doctorLastName +"\n"
                 + "time of appointment : " + time + "\n"
-                + "massage : " + massage +"\n"
+                + "message : " + message +"\n"
                 + "report : " + report+"\n" ;
     }
     

@@ -144,17 +144,17 @@ public class AddNewVisistorPatient extends Application {
                         String n4 = diseasen.getText();
                         String n6 = timen.getText();
 
-                        k.setPass(passn.getText());
+                        k.setPassword(passn.getText());
                         k.setUserName(usernamen.getText());
                         k.setdID(b);
-                        k.setDfname(dfnamen.getText());
+                        k.setDoctorFirstName(dfnamen.getText());
                         k.setID(y);
-                        k.setDlname(dlnamen.getText());
+                        k.setDoctorLastName(dlnamen.getText());
                         k.setAge(i);
-                        k.setMhistory(diseasen.getText());
+                        k.setMessageHistory(diseasen.getText());
                         k.setTime(timen.getText());
-                        k.setFName(fn.getText());
-                        k.setLName(ln.getText());
+                        k.setFirstName(fn.getText());
+                        k.setlastName(ln.getText());
 
                         if (r1.isSelected()) {
                             x.addNewVpatient(usernamen.getText(), passn.getText(), y, fn.getText(), ln.getText(), i, diseasen.getText(), timen.getText(), dfnamen.getText(), dlnamen.getText(), b, ProjH.Surgery);

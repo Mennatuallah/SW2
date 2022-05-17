@@ -147,14 +147,14 @@ public class AddNewDoctor extends Application {
                     String n6 = timen.getText();
                     String n7 = specn.getText();
 
-                    k.setFName(fn.getText());
+                    k.setFirstName(fn.getText());
                     k.setID(y);
-                    k.setLName(ln.getText());
+                    k.setlastName(ln.getText());
                     k.setAge(i);
                     k.setUserName(emailn.getText());
-                    k.setPass(passn.getText());
+                    k.setPassword(passn.getText());
                     k.setTimeTable(timen.getText());
-                    k.setDept(ProjH.Surgery);
+                    k.setDepartment(ProjH.Surgery);
 
                     if (r1.isSelected()) {
                         x.addNewDoctor(emailn.getText(), passn.getText(), y, fn.getText(), ln.getText(), i, j, ProjH.the_Heart, timen.getText());

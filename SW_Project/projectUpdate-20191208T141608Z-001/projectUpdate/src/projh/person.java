@@ -13,11 +13,11 @@ import java.rmi.server.ObjID;
 public abstract class person implements Serializable {
     public int id;
     protected String userName;
-    protected String pass;
-    protected String fname;
-    protected String lname;
+    protected String password;
+    protected String firstName;
+    protected String lastName;
     protected int age;
-    department myDept;
+    department myDepartment;
 
     filemanger FManger = new filemanger();
 
@@ -26,15 +26,15 @@ public abstract class person implements Serializable {
     public person() {
     }
 
-    public person(String user, String pass, int id, String fname, String lname, int age, department dept) {
+    public person(String user, String password, int id, String firstName, String LastName, int age, department Department) {
              
         this.id = id;
-        this.fname = fname;
-        this.lname = lname;
+        this.firstName = firstName;
+        this.lastName = LastName;
         this.age = age;
         this.userName = user;
-        this.pass = pass;
-        this.myDept = dept;
+        this.password = password;
+        this.myDepartment = Department;
          
     }
 
@@ -46,12 +46,12 @@ public abstract class person implements Serializable {
         this.id = id;
     }
 
-    public void setFName(String fname) {
-        this.fname = fname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public void setLName(String lname) {
-        this.lname = lname;
+    public void setlastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public void setAge(int age) {
@@ -62,12 +62,12 @@ public abstract class person implements Serializable {
         this.userName = userName;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public void setDept(department dept) {
-        this.myDept = dept;
+    public void setDepartment(department Department) {
+        this.myDepartment = Department;
     }
 
     
@@ -75,28 +75,28 @@ public abstract class person implements Serializable {
         return this.userName;
     }
 
-    public String getPass() {
-        return this.pass;
+    public String getPassword() {
+        return this.password;
     }
 
     public int getID() {
         return this.id;
     }
 
-    public String getFName() {
-        return this.fname;
+    public String getFirstName() {
+        return this.firstName;
     }
 
-    public String getLName() {
-        return this.lname;
+    public String getLastName() {
+        return this.lastName;
     }
 
     public int getAge() {
         return this.age;
     }
 
-    public boolean login(String userName, String Pass) {
-        if (userName.equals("Admin") && Pass.equals("12345678")) {
+    public boolean login(String userName, String Password) {
+        if (userName.equals("Admin") && Password.equals("12345678")) {
             return true;
         }
         return false;

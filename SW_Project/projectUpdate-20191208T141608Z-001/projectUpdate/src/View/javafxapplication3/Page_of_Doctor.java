@@ -18,10 +18,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-/**
- *
- * @author 
- */
 public class Page_of_Doctor extends Application {
     
     @Override

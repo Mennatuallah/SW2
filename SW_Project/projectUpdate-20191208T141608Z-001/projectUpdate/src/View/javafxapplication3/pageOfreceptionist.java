@@ -15,10 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.receptionist;
 
-/**
- *
- * @author 
- */
+
 public class pageOfreceptionist extends Application {
     
     @Override

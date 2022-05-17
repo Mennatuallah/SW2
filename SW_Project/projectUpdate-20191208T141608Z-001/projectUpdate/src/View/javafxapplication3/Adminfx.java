@@ -25,29 +25,12 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author 
- */
+
 public class Adminfx extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        /*
-        GridPane root = new GridPane();
-        root.setAlignment(Pos.CENTER);
-        Button b1= new Button("Login as Admin");
-        Button b2= new Button("Login as Doctor");
-        Button b3= new Button("Login as Receptionist");
-       root.add(b1, 0, 0);
-        root.add(b2, 1, 1);
-         root.add(b3, 2, 2);
-         root.setPadding(new Insets(13,13,13,13));
-         root.setHgap(20);
-        */
-        
-        //GridPane root = new GridPane();
-        
+       
         VBox v = new VBox();
       
         
@@ -68,9 +51,7 @@ public class Adminfx extends Application {
       
         
         
-       // root.setPadding(new Insets(30,0,0,0));
-//        BorderPane.setMargin(b1, new Insets(20));
-//         BorderPane.setMargin(b2, new Insets(20));
+      
         b1.setPrefSize(150, 50);
         b2.setPrefSize(150, 50);
         b3.setPrefSize(150, 50);

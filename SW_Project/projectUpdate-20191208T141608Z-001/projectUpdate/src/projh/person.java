@@ -5,10 +5,7 @@
  */
 package projh;
 
-/**
- *
- * @author 
- */
+
 import java.io.Serializable;
 import java.rmi.server.ObjID;
 
@@ -106,7 +103,7 @@ public abstract class person implements Serializable {
     }
 
     public void showMyReport(ObjID id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
 }

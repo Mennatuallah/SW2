@@ -24,10 +24,7 @@ import javafx.stage.Stage;
 import projh.Admin;
 
 
-/**
- *
- * @author 
- */
+
 public class DisplayAllPatient extends Application {
     
     @Override

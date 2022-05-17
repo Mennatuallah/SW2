@@ -77,12 +77,7 @@ public class AddNewDoctor extends Application {
         TextField timen = new TextField();
         Button submit = new Button("Submit");
         Button back = new Button("Back");
-        /*
-        CheckBox box1 = new CheckBox("Surgery");
-        CheckBox box2 = new CheckBox("the Heart");
-        CheckBox box3 = new CheckBox("The belly");
-        CheckBox box4 = new CheckBox("Bones");
-        */
+       
        RadioButton r1 = new RadioButton("Surgery");
        RadioButton r2 = new RadioButton("the Heart");
        RadioButton r3 = new RadioButton("The belly");
@@ -104,12 +99,7 @@ public class AddNewDoctor extends Application {
        l.getChildren().addAll(r1,r2,r3,r4);
        
        
-       /*
-        HBox h=new HBox();
-        h.setSpacing(5);
-        h.setPadding(new Insets(5));
-        h.getChildren().addAll(box1,box2,box3,box4);
-        */
+    
         
         
        root.add(fname,0,0);

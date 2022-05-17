@@ -5,10 +5,7 @@
  */
 package projh;
 import java.io.Serializable;
-/**
- *
- * @author 
- */
+
 public abstract class staff extends person implements Serializable {
     
      protected double salary;
@@ -35,9 +32,7 @@ public abstract class staff extends person implements Serializable {
         return this.myDept.getDeptName();
     }
 
-    /*•== operator is used to compare the references of the objects.
-    •Comparing two references for equality does not compare the contents of the objects referenced.
-    override this method so that it is used to compare the values of two objects.*/
+    
     @Override
     public boolean equals(Object o) {
         staff u = (staff) o;

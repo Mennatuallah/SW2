@@ -20,10 +20,6 @@ import projh.Admin;
 import projh.ResidentPatient;
 import projh.VisitorPatient;
 
-/**
- *
- * @author 
- */
 public class DeletVisitorPatient extends Application {
     
     @Override

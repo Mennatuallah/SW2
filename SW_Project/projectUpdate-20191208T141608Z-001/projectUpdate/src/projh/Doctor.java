@@ -6,10 +6,7 @@
 package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
-/**
- *
- * @author 
- */
+
 public class Doctor extends staff implements Serializable {
     
     protected String timetable ;

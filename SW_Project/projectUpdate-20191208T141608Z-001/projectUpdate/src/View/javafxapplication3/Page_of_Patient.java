@@ -17,10 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-/**
- *
- * @author 
- */
+
 public class Page_of_Patient extends Application {
     
     @Override
@@ -58,12 +55,10 @@ public class Page_of_Patient extends Application {
         VBox.setMargin(Displayv, new Insets(10));
         
         BorderPane root= new BorderPane();
-        //Label text = new Label("Welcom to the Page of Patient");
-        //root.setCenter(text);
+      
         root.setLeft(v);
         root.setRight(r);
-        //text.setPadding(new Insets(20));
-         
+        
         Scene scene = new Scene(root, 400, 300);
         scene.getStylesheets().add(Page_of_Patient.class.getResource("Page_of_Patient.css").toExternalForm());
         

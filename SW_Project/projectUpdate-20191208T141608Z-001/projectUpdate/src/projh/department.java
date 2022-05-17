@@ -6,10 +6,7 @@
 package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
-/**
- *
- * @author 
- */
+
 public class department implements Serializable {
     private String DeptID;
     private String DeptName;

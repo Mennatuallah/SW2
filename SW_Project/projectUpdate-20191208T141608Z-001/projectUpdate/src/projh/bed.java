@@ -7,10 +7,7 @@ package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
 import static projh.ResidentPatient.rpatients;
-/**
- *
- * @author 
- */
+
 public class bed implements Serializable{
     
     protected int id;

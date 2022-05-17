@@ -5,10 +5,7 @@
  */
 package projh;
 import java.io.Serializable;
-/**
- *
- * @author 
- */
+
 public class receptionist extends staff implements Serializable{
     
     

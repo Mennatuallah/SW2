@@ -7,15 +7,10 @@ package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.logging.Logger;
-/**
- *
- * @author 
- */
+
 public class ResidentPatient extends patient implements Serializable {
     
-    /**
-     *
-     */
+  
     protected int mybedID;
     protected int myroomNumber;
     private final String rPatientFileName = "rpatients.bin";

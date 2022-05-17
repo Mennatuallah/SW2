@@ -17,10 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.Admin;
 
-/**
- *
- * @author 
- */
+
 public class DisplayAllVisitorPatient extends Application {
     
     @Override

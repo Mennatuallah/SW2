@@ -5,10 +5,6 @@
  */
 package projh;
 
-/**
- *
- * @author 
- */
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;

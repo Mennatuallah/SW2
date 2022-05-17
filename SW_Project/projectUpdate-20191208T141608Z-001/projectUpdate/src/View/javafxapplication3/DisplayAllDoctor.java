@@ -18,10 +18,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.Admin;
 
-/**
- *
- * @author 
- */
+
 public class DisplayAllDoctor extends Application {
     
     @Override
@@ -43,22 +40,10 @@ public class DisplayAllDoctor extends Application {
            root.add(text, 0, 0);
        }
        else
-          // System.out.println("jj");
+        
            text.setText("empty");
            
-       /*
-       Label fname = new Label("First Name: ");
-       Label lname = new Label("Last Name: ");
-       Label id = new Label("ID: ");
-       Label age = new Label("Age: ");
-       Label addresse = new Label("Addresse: ");
-       Label email = new Label("Email: ");
-       Label pass = new Label("Password: ");
-       Label dept = new Label("Deparment: ");
-       Label spec = new Label("Sepcilization: ");
-       Label salary = new Label("Salary");
-       Label Time= new Label("Time");
-        */
+    
        
             back.setOnMouseClicked(e->{
             

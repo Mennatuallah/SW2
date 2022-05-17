@@ -38,10 +38,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
 
-/**
- *
- * @author 
- */
+
 public class Login extends Application {
     
     @Override

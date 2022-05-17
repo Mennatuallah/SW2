@@ -12,10 +12,6 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 import View.javafxapplication3.Login;
 
-/**
- *
- * @author 
- */
 public class ProjH extends Application {
 
     

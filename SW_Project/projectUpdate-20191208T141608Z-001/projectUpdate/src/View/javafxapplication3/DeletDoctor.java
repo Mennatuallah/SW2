@@ -21,10 +21,6 @@ import projh.Admin;
 import projh.Doctor;
 
 
-/**
- *
- * @author 
- */
 public class DeletDoctor extends Application {
     
     @Override

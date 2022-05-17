@@ -18,10 +18,7 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import projh.Doctor;
 
-/**
- *
- * @author 
- */
+
 public class SearchONDoctor extends Application {
     
     @Override

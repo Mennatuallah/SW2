@@ -19,10 +19,7 @@ import projh.receptionist;
 import projh.VisitorPatient;
 import javafx.scene.control.TableView;
 
-/**
- *
- * @author 
- */
+
 
     
    public class scene__s {

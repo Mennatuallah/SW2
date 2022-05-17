@@ -85,10 +85,21 @@ public class Login extends Application {
               
                 if(tf.getText().equals("Admin")&&pf.getText().equals("12345678")){
                     primaryStage.close();
-                    Login1 x = new Login1();
+                    Adminfx AdminPage = new Adminfx();
                     try {
                         Stage s = new Stage();
-                        x.start(s);
+                        AdminPage.start(s);
+
+                    } catch (Exception ex) {
+                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                              else if(tf.getText().equals("Patient")&&pf.getText().equals("123")){
+                    primaryStage.close();
+                    pageOfpatient PatientPage = new pageOfpatient();
+                    try {
+                        Stage s = new Stage();
+                        PatientPage.start(s);
 
                     } catch (Exception ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

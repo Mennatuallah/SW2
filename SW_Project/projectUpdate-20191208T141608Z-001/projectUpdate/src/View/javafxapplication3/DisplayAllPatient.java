@@ -23,50 +23,43 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.Admin;
 
-
-
 public class DisplayAllPatient extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
         Admin x = new Admin();
-        GridPane root = new GridPane() ;
-        
-       
+        GridPane root = new GridPane();
+
         Button back = new Button("Back");
-       root.setAlignment(Pos.CENTER);
-       root.setHgap(10);
-       root.setVgap(10);
-       root.add(back, 0, 9);
-       Text text = new Text();
-       text.setId("hh");
-        ScrollBar sc= new ScrollBar();
-        
-       VBox d= new VBox();
-       d.getChildren().add(sc);
-       text.setText(x.displayAllResidentPatient());
-        
-       
-       if(text != null)
-       {
-           root.add(text, 0, 0); 
-       }
-       else
-       {
-          text.setText("null");
-          
-       }
-               
+        root.setAlignment(Pos.CENTER);
+        root.setHgap(10);
+        root.setVgap(10);
+        root.add(back, 0, 9);
+        Text text = new Text();
+        text.setId("hh");
+        ScrollBar sc = new ScrollBar();
+
+        VBox d = new VBox();
+        d.getChildren().add(sc);
+        text.setText(x.displayAllResidentPatient());
+
+        if (text != null) {
+            root.add(text, 0, 0);
+        } else {
+            text.setText("null");
+
+        }
+
         Scene scene = new Scene(root, 1000, 700);
         scene.getStylesheets().add(DisplayAllPatient.class.getResource("DispalyAllPatient.css").toExternalForm());
-        
+
         primaryStage.setTitle("Display All Patient");
         primaryStage.setScene(scene);
         primaryStage.show();
-         back.setOnMouseClicked(e->{
-            
-                new Page_of_Patient().start(primaryStage);
-            });
+        back.setOnMouseClicked(e -> {
+
+            new Page_of_Patient().start(primaryStage);
+        });
     }
 
     /**
@@ -75,5 +68,5 @@ public class DisplayAllPatient extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

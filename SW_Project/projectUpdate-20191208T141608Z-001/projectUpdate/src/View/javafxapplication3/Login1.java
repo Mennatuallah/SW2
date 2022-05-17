@@ -32,116 +32,106 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Login1 extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-      primaryStage.setTitle("Choice ");
+        primaryStage.setTitle("Choice ");
         GridPane g = new GridPane();
         g.setAlignment(Pos.CENTER);
         g.setHgap(5);
         g.setVgap(5);
-        g.setPadding(new Insets(20,20,20,20));
-        g.setBackground(new Background (new BackgroundFill(Color.CADETBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
+        g.setPadding(new Insets(20, 20, 20, 20));
+        g.setBackground(new Background(new BackgroundFill(Color.CADETBLUE, CornerRadii.EMPTY, Insets.EMPTY)));
         Label l = new Label("Choose your request : ");
         l.setTextFill(Color.WHITE);
         l.setAlignment(Pos.CENTER);
-        l.setFont(Font.font("tahoma", FontWeight.BOLD,35));
-        
+        l.setFont(Font.font("tahoma", FontWeight.BOLD, 35));
+
         Button b = new Button("Receptoinest Page");
-        b.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
-       
+        b.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
 
         Button b1 = new Button("Admin Page");
-        
-        b1.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
-        
-        
+
+        b1.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
+
         Button b2 = new Button("Patient Page");
-        
-        b2.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
-        
+
+        b2.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
+
         Button b3 = new Button("Doctors Page");
-        
-        b3.setBorder(new Border(new BorderStroke(Color.BLACK,BorderStrokeStyle.SOLID,CornerRadii.EMPTY,BorderWidths.DEFAULT)));
+
+        b3.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
         final Text actiontarget = new Text();
-        g.add(actiontarget, 1,6);
-         
-         g.add(l, 1, 0);
-         g.add(b, 1, 5);
-         g.add(b1,5, 5);
-         g.add(b2,1, 10);
-         g.add(b3,5, 10);
-        
+        g.add(actiontarget, 1, 6);
+
+        g.add(l, 1, 0);
+        g.add(b, 1, 5);
+        g.add(b1, 5, 5);
+        g.add(b2, 1, 10);
+        g.add(b3, 5, 10);
+
         b.setOnAction(new EventHandler<ActionEvent>() {
-         public void handle(ActionEvent e) {
-              
-               
-                    primaryStage.close();
-                    pageOfreceptionist admin = new pageOfreceptionist();
-                    try {
-                        Stage s = new Stage();
-                        admin.start(s);
+            public void handle(ActionEvent e) {
 
-                    } catch (Exception ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-         }
-     });
+                primaryStage.close();
+                pageOfreceptionist admin = new pageOfreceptionist();
+                try {
+                    Stage s = new Stage();
+                    admin.start(s);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
         b1.setOnAction(new EventHandler<ActionEvent>() {
-         public void handle(ActionEvent e) {
-              
-               
-                    primaryStage.close();
-                    Adminfx admin = new Adminfx();
-                    try {
-                        Stage s = new Stage();
-                        admin.start(s);
+            public void handle(ActionEvent e) {
 
-                    } catch (Exception ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-         }
-     });
+                primaryStage.close();
+                Adminfx admin = new Adminfx();
+                try {
+                    Stage s = new Stage();
+                    admin.start(s);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
         b2.setOnAction(new EventHandler<ActionEvent>() {
-         public void handle(ActionEvent e) {
-              
-               
-                    primaryStage.close();
-                    pageOfpatient admin = new pageOfpatient();
-                    try {
-                        Stage s = new Stage();
-                        admin.start(s);
+            public void handle(ActionEvent e) {
 
-                    } catch (Exception ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-         }
-     });
+                primaryStage.close();
+                pageOfpatient admin = new pageOfpatient();
+                try {
+                    Stage s = new Stage();
+                    admin.start(s);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
         b3.setOnAction(new EventHandler<ActionEvent>() {
-         public void handle(ActionEvent e) {
-              
-               
-                    primaryStage.close();
-                    pageOfdotor admin = new pageOfdotor();
-                    try {
-                        Stage s = new Stage();
-                        admin.start(s);
+            public void handle(ActionEvent e) {
 
-                    } catch (Exception ex) {
-                        Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-         }
-     });
-         
-         
-         
-         
+                primaryStage.close();
+                pageOfdotor admin = new pageOfdotor();
+                try {
+                    Stage s = new Stage();
+                    admin.start(s);
+
+                } catch (Exception ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+
         Scene s = new Scene(g, 700, 800);
         s.getStylesheets().add(Login.class.getResource("name.css").toExternalForm());
         primaryStage.setScene(s);
         primaryStage.show();
     }
-       
 
     /**
      * @param args the command line arguments
@@ -149,5 +139,5 @@ public class Login1 extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

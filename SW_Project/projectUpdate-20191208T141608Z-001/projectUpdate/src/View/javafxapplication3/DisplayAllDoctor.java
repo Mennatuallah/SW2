@@ -18,38 +18,33 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import projh.Admin;
 
-
 public class DisplayAllDoctor extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-       
+
         Admin x = new Admin();
-        GridPane root = new GridPane() ;
-       root.setAlignment(Pos.CENTER);
-       root.setHgap(10);
-       root.setVgap(10);
-       Button back = new Button("Back");
-       root.add(back, 0, 9);
-       Text text = new Text();
-       text.setId("hh");
-       text.setText(x.displayAllDoctor());
-       
-       if(text != null)
-       {
-           root.add(text, 0, 0);
-       }
-       else
-        
-           text.setText("empty");
-           
-    
-       
-            back.setOnMouseClicked(e->{
-            
-                new Page_of_Doctor().start(primaryStage);
-            });
-        
+        GridPane root = new GridPane();
+        root.setAlignment(Pos.CENTER);
+        root.setHgap(10);
+        root.setVgap(10);
+        Button back = new Button("Back");
+        root.add(back, 0, 9);
+        Text text = new Text();
+        text.setId("hh");
+        text.setText(x.displayAllDoctor());
+
+        if (text != null) {
+            root.add(text, 0, 0);
+        } else {
+            text.setText("empty");
+        }
+
+        back.setOnMouseClicked(e -> {
+
+            new Page_of_Doctor().start(primaryStage);
+        });
+
         Scene scene = new Scene(root, 1000, 700);
         scene.getStylesheets().add(DisplayAllDoctor.class.getResource("DisplayAllDoctor.css").toExternalForm());
         primaryStage.setTitle("Display All Doctor");
@@ -63,5 +58,5 @@ public class DisplayAllDoctor extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

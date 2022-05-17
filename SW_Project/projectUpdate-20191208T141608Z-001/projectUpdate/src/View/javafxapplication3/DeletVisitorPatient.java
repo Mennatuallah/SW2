@@ -21,73 +21,68 @@ import projh.ResidentPatient;
 import projh.VisitorPatient;
 
 public class DeletVisitorPatient extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-         Label found= new Label();
-       found.setId("found");
-       Label text = new Label();
+        Label found = new Label();
+        found.setId("found");
+        Label text = new Label();
         TextField searchn = new TextField();
-        Button search =new Button("Search");
+        Button search = new Button("Search");
         Button submit = new Button("Submit");
         Button back = new Button("Back");
-        GridPane root =new GridPane();
+        GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);
         root.setHgap(10);
         root.setVgap(10);
-        root.add(searchn,1,0);
-        root.add(search,2,0);
+        root.add(searchn, 1, 0);
+        root.add(search, 2, 0);
         root.add(found, 1, 1);
         root.add(submit, 2, 2);
-        root.add(back,0,2);
+        root.add(back, 0, 2);
         root.add(text, 1, 3);
-        
-        Scene scene = new Scene(root, 700,600);
+
+        Scene scene = new Scene(root, 700, 600);
         scene.getStylesheets().add(DeletPatient.class.getResource("DeletPatient.css").toExternalForm());
         primaryStage.setTitle("Delet Visitor Patient");
         primaryStage.setScene(scene);
         primaryStage.show();
-        
-        
-         VisitorPatient h =new VisitorPatient();
-        search.setOnMouseClicked(e->{
-        if(!searchn.getText().isEmpty())
-         {
-              if(isInt(searchn,searchn.getText()))
-              {
+
+        VisitorPatient h = new VisitorPatient();
+        search.setOnMouseClicked(e -> {
+            if (!searchn.getText().isEmpty()) {
+                if (isInt(searchn, searchn.getText())) {
                     int i = (Integer.parseInt(searchn.getText()));
-                  String j =  h.searchPatient(i);
-                  if(j == null)
-                  {
-                      found.setText("Not Found");
-                     
-                  }
-                   else
-                  {
-                      
-                     found.setText(j+"\n"+"Delet data");
-                  }
-              }else
-                  found.setText("Error Entered Number");
-               
-        }
-      });
-        
-        Admin x =new Admin();
-        submit.setOnMouseClicked(e->{
-            if(isInt(searchn,searchn.getText()))
-            {
-            int i = (Integer.parseInt(searchn.getText()));
-            x.deleteVisitorPatient(i);
-            text.setText("Done...");
-            }else
-                text.setText("Error Entered Number");
-        
+                    String j = h.searchPatient(i);
+                    if (j == null) {
+                        found.setText("Not Found");
+
+                    } else {
+
+                        found.setText(j + "\n" + "Delet data");
+                    }
+                } else {
+                    found.setText("Error Entered Number");
+                }
+
+            }
         });
-        back.setOnMouseClicked(e->{
-            
-                new Page_of_Patient().start(primaryStage);
-            });
+
+        Admin x = new Admin();
+        submit.setOnMouseClicked(e -> {
+            if (isInt(searchn, searchn.getText())) {
+                int i = (Integer.parseInt(searchn.getText()));
+                x.deleteVisitorPatient(i);
+                text.setText("Done...");
+            } else {
+                text.setText("Error Entered Number");
+            }
+
+        });
+        back.setOnMouseClicked(e -> {
+
+            new Page_of_Patient().start(primaryStage);
+        });
     }
 
     /**
@@ -96,15 +91,14 @@ public class DeletVisitorPatient extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-        private boolean isInt(TextField input,String message)
-    {
-        try{
-        int number = Integer.parseInt(input.getText());
-        return true;
-        }catch(NumberFormatException e)
-        {
+
+    private boolean isInt(TextField input, String message) {
+        try {
+            int number = Integer.parseInt(input.getText());
+            return true;
+        } catch (NumberFormatException e) {
             return false;
         }
-    
+
     }
 }

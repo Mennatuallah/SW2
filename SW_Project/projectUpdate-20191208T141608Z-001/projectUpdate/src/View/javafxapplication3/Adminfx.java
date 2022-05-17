@@ -6,6 +6,7 @@
 package View.javafxapplication3;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -23,56 +24,52 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-
 public class Adminfx extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-       
+
         VBox v = new VBox();
-      
-        
-        Button b1= new Button("Page of Patient");
-        Button b2= new Button("Page of Doctor");
-         Button b3= new Button("Back");
-        
-        v.getChildren().addAll(b1,b2,b3);
-       
+
+        Button b1 = new Button("Page of Patient");
+        Button b2 = new Button("Page of Doctor");
+        Button b3 = new Button("Exit");
+
+        v.getChildren().addAll(b1, b2, b3);
+
         VBox.setMargin(b2, new Insets(10));
         VBox.setMargin(b1, new Insets(10));
         VBox.setMargin(b3, new Insets(10));
-//        
-        BorderPane root= new BorderPane();
-        
-        
+
+        BorderPane root = new BorderPane();
+
         root.setLeft(v);
-      
-        
-        
-      
+
         b1.setPrefSize(150, 50);
         b2.setPrefSize(150, 50);
         b3.setPrefSize(150, 50);
-//        
+
         Scene scene = new Scene(root, 500, 400);
         scene.getStylesheets().add(Adminfx.class.getResource("Adminfx.css").toExternalForm());
-       b2.setOnMouseClicked(e->{
-           primaryStage.close();
-           new Page_of_Doctor().start(primaryStage);
-       });
-       
-       b1.setOnMouseClicked(e->{
-           primaryStage.close();
-           new Page_of_Patient().start(primaryStage);
-       });
-       
-       b3.setOnMouseClicked(e->{
-           primaryStage.close();
-           new Login1().start(primaryStage);
-       
-       });
+        b2.setOnMouseClicked(e -> {
+            primaryStage.close();
+            new Page_of_Doctor().start(primaryStage);
+        });
+
+        b1.setOnMouseClicked(e -> {
+            primaryStage.close();
+            new Page_of_Patient().start(primaryStage);
+        });
+
+        b3.setOnAction((ActionEvent e) -> {
+            if (e.getSource() == b3) {
+                Platform.exit();
+            }
+        });
         primaryStage.setTitle("Admin Page");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -84,5 +81,5 @@ public class Adminfx extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

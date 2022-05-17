@@ -25,76 +25,57 @@ import javafx.stage.Stage;
 import projh.ResidentPatient;
 import projh.VisitorPatient;
 import projh.person;
+
 /**
  *
- * @author 
+ * @author
  */
 public class pageOfpatient extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-      Pane grid = new Pane();
-        //?? ????? ???? ?? ???? ???
-        /*   StackPane holder=new StackPane();
-        //Canvas canvas = new Canvas(2000,2000);
-        //holder.getChildren().add(canvas);
-        grid.getChildren().add(holder);
-        holder.setStyle("-fx-background-Color.RED");*/
-        
-        Text txt1=new Text("WELCOME....");
-        txt1.setFont(Font.font("RED",FontWeight.EXTRA_BOLD,50));
+        Pane grid = new Pane();
+
+        Text txt1 = new Text("WELCOME....");
+        txt1.setFont(Font.font("RED", FontWeight.EXTRA_BOLD, 50));
         txt1.setFill(Color.BLUEVIOLET);
         txt1.setLayoutX(10);
         txt1.setLayoutY(50);
-       /////Button1///// 
-        Button b=new Button("Show All Timetable");
-        b.setFont(Font.font("RED",FontWeight.BOLD,30));
+
+        Button b = new Button("Show All Timetable");
+        b.setFont(Font.font("RED", FontWeight.BOLD, 30));
         b.setLayoutX(200);
         b.setLayoutY(120);
-        //?????? ???? ????? ?????
-               ResidentPatient rp=new ResidentPatient();
-               VisitorPatient vp = new VisitorPatient();
+
+        ResidentPatient rp = new ResidentPatient();
+        VisitorPatient vp = new VisitorPatient();
         b.setOnAction((ActionEvent event) -> {
-         rp.showALLTimeTable();
-         vp.showALLTimeTable();
+            rp.showALLTimeTable();
+            vp.showALLTimeTable();
         });
-        /////Button2///// 
-        Button b2=new Button("Show My Report");
-        b2.setFont(Font.font("RED",FontWeight.BOLD,30));
+
+        Button b2 = new Button("Show My Report");
+        b2.setFont(Font.font("RED", FontWeight.BOLD, 30));
         b2.setLayoutX(200);
         b2.setLayoutY(220);
         b2.setOnAction((ActionEvent event) -> {
-         rp.showMyReport(rp.id);
-         vp.showMyReport(vp.id);
+            rp.showMyReport(rp.id);
+            vp.showMyReport(vp.id);
         });
-        /////Button/////
-        Button b3=new Button("EXIT");
+
+        Button b3 = new Button("EXIT");
         b3.setLayoutX(640);
         b3.setLayoutY(410);
-        b3.setFont(Font.font("RED",FontWeight.EXTRA_BOLD,15));
+        b3.setFont(Font.font("RED", FontWeight.EXTRA_BOLD, 15));
         b3.setOnAction((ActionEvent e) -> {
-            if (e.getSource()==b3){
+            if (e.getSource() == b3) {
                 Platform.exit();
-            }});
-        ///////////////////////////////////////////////////////////////////////////////////
-      // ?? ????? ???? ?????? ???? ?????
-          
-        /*GridPane n=new GridPane();
-        Button btn = new Button("NEXT");
-        btn.setLayoutX(16);
-        btn.setLayoutY(410);
-        grid.getChildren().add(btn);
-        Scene scene2=new Scene(n,700,450);
-        
-        
-        btn.setOnAction((ActionEvent event) -> {
-        primaryStage.setScene(scene2);
-        //primaryStage.show();
-        });*/
-        ////////////////////////////////////////////////////////////////////////////////////
-        grid.getChildren().addAll(b,txt1,b2,b3);
+            }
+        });
+
+        grid.getChildren().addAll(b, txt1, b2, b3);
         Scene scene = new Scene(grid, 700, 450);
-        
+
         primaryStage.setTitle("Hospital");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -106,5 +87,5 @@ public class pageOfpatient extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

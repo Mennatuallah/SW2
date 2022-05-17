@@ -18,64 +18,58 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import projh.ResidentPatient;
 
-
 /**
  *
- * @author 
+ * @author
  */
 public class SearchONPatient extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-       GridPane root =new GridPane();
+        GridPane root = new GridPane();
         root.setAlignment(Pos.CENTER);
         root.setHgap(10);
         root.setVgap(10);
         TextField searchn = new TextField();
-        Button search= new Button ("Search");
+        Button search = new Button("Search");
         Button back = new Button("Back");
         Label found = new Label();
         found.setId("hh");
-        root.add(searchn,1,0);
-        root.add(search,2,2);
-        root.add(back,0,2);
-        root.add(found,1,1);
+        root.add(searchn, 1, 0);
+        root.add(search, 2, 2);
+        root.add(back, 0, 2);
+        root.add(found, 1, 1);
         Scene scene = new Scene(root, 500, 500);
         scene.getStylesheets().add(SearchONPatient.class.getResource("SearchONPatient.css").toExternalForm());
-        
+
         ResidentPatient h = new ResidentPatient();
-        search.setOnMouseClicked(e->{
-        if(!searchn.getText().isEmpty())
-         {
-              if(isInt(searchn,searchn.getText()))
-              {
+        search.setOnMouseClicked(e -> {
+            if (!searchn.getText().isEmpty()) {
+                if (isInt(searchn, searchn.getText())) {
                     int i = (Integer.parseInt(searchn.getText()));
-                  String j =  h.searchPatient(i);
-                  if(j == null)
-                  {
-                      found.setText("Not Found");
-                     
-                  }
-                   else
-                  {
-                      
-                     found.setText(j+"\n");
-                  }
-              }
-              else
-                  found.setText("Error Enterd Number");
-               
-        }
-      });
-        
+                    String j = h.searchPatient(i);
+                    if (j == null) {
+                        found.setText("Not Found");
+
+                    } else {
+
+                        found.setText(j + "\n");
+                    }
+                } else {
+                    found.setText("Error Enterd Number");
+                }
+
+            }
+        });
+
         primaryStage.setTitle("Search ON Patient");
         primaryStage.setScene(scene);
         primaryStage.show();
-        
-         back.setOnMouseClicked(e->{
-            
-                new Page_of_Patient().start(primaryStage);
-            });
+
+        back.setOnMouseClicked(e -> {
+
+            new Page_of_Patient().start(primaryStage);
+        });
     }
 
     /**
@@ -84,15 +78,14 @@ public class SearchONPatient extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-       private boolean isInt(TextField input,String message)
-    {
-        try{
-        int number = Integer.parseInt(input.getText());
-        return true;
-        }catch(NumberFormatException e)
-        {
+
+    private boolean isInt(TextField input, String message) {
+        try {
+            int number = Integer.parseInt(input.getText());
+            return true;
+        } catch (NumberFormatException e) {
             return false;
         }
-    
-    } 
+
+    }
 }

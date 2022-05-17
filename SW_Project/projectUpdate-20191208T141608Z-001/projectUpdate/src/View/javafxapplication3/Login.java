@@ -37,50 +37,47 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 
-
-
 public class Login extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) {
-       
-    
-         primaryStage.setTitle("Login");
-     GridPane g = new GridPane();
-     g.setAlignment(Pos.CENTER);
-     g.setHgap(5);
-     g.setVgap(5);
-     g.setPadding(new Insets(20,20,20,20));
-    
-     Text t = new Text("login : ");
-     t.setFont(Font.font("tahoma", FontWeight.LIGHT,0));
-     Label l = new Label("User Name : ");
-     l.setFont(Font.font("tahoma", FontWeight.BOLD,20));
 
-     TextField tf = new TextField();
-     Label l2 = new Label("password :");
-     l2.setFont(Font.font("tahoma", FontWeight.BOLD,20));
-     PasswordField pf = new PasswordField();
-     
-     g.add(t, 0, 0,2,1);
-     g.add(l,0,1);
-     g.add(tf, 1,1);
-     g.add(l2, 0,2);
-     g.add(pf, 1,2);
- 
-     g.setGridLinesVisible(false);
-     Button b = new Button("submit");
-     b.setFont(Font.font("tahoma", FontWeight.BOLD,20));
-     HBox hb = new HBox(20);
-     hb.setAlignment(Pos.BOTTOM_RIGHT);
-     hb.getChildren().add(b);
-     g.add(hb, 1, 3);
-     final Text actiontarget = new Text();
-     g.add(actiontarget, 1,6);
-     b.setOnAction(new EventHandler<ActionEvent>() {
-         public void handle(ActionEvent e) {
-              
-                if(tf.getText().equals("Admin")&&pf.getText().equals("12345678")){
+        primaryStage.setTitle("Login");
+        GridPane g = new GridPane();
+        g.setAlignment(Pos.CENTER);
+        g.setHgap(5);
+        g.setVgap(5);
+        g.setPadding(new Insets(20, 20, 20, 20));
+
+        Text t = new Text("login : ");
+        t.setFont(Font.font("tahoma", FontWeight.LIGHT, 0));
+        Label l = new Label("User Name : ");
+        l.setFont(Font.font("tahoma", FontWeight.BOLD, 20));
+
+        TextField tf = new TextField();
+        Label l2 = new Label("password :");
+        l2.setFont(Font.font("tahoma", FontWeight.BOLD, 20));
+        PasswordField pf = new PasswordField();
+
+        g.add(t, 0, 0, 2, 1);
+        g.add(l, 0, 1);
+        g.add(tf, 1, 1);
+        g.add(l2, 0, 2);
+        g.add(pf, 1, 2);
+
+        g.setGridLinesVisible(false);
+        Button b = new Button("submit");
+        b.setFont(Font.font("tahoma", FontWeight.BOLD, 20));
+        HBox hb = new HBox(20);
+        hb.setAlignment(Pos.BOTTOM_RIGHT);
+        hb.getChildren().add(b);
+        g.add(hb, 1, 3);
+        final Text actiontarget = new Text();
+        g.add(actiontarget, 1, 6);
+        b.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent e) {
+
+                if (tf.getText().equals("Admin") && pf.getText().equals("12345678")) {
                     primaryStage.close();
                     Adminfx AdminPage = new Adminfx();
                     try {
@@ -90,8 +87,7 @@ public class Login extends Application {
                     } catch (Exception ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                }
-                              else if(tf.getText().equals("Patient")&&pf.getText().equals("123")){
+                } else if (tf.getText().equals("Patient") && pf.getText().equals("123")) {
                     primaryStage.close();
                     pageOfpatient PatientPage = new pageOfpatient();
                     try {
@@ -101,8 +97,7 @@ public class Login extends Application {
                     } catch (Exception ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                }
-                               else if(tf.getText().equals("Doctor")&&pf.getText().equals("1234")){
+                } else if (tf.getText().equals("Doctor") && pf.getText().equals("1234")) {
                     primaryStage.close();
                     pageOfdotor DoctorPage = new pageOfdotor();
                     try {
@@ -112,8 +107,7 @@ public class Login extends Application {
                     } catch (Exception ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                }
-                               else if(tf.getText().equals("Staff")&&pf.getText().equals("12345")){
+                } else if (tf.getText().equals("Staff") && pf.getText().equals("12345")) {
                     primaryStage.close();
                     pageOfreceptionist StaffPage = new pageOfreceptionist();
                     try {
@@ -123,17 +117,15 @@ public class Login extends Application {
                     } catch (Exception ex) {
                         Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                }
-                else{
+                } else {
                     actiontarget.setFill(Color.CADETBLUE);
                     actiontarget.setText("Invalid Username and Password!");
                 }
             }
-     });
-     
-     
-     Scene s = new Scene(g,700,700);
-    s.getStylesheets().add(Login.class.getResource("name.css").toExternalForm());
+        });
+
+        Scene s = new Scene(g, 700, 700);
+        s.getStylesheets().add(Login.class.getResource("name.css").toExternalForm());
         primaryStage.setScene(s);
         primaryStage.show();
     }
@@ -144,5 +136,5 @@ public class Login extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
+
 }

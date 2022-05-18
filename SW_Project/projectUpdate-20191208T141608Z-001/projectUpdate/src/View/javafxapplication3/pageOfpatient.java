@@ -72,8 +72,15 @@ public class pageOfpatient extends Application {
                 Platform.exit();
             }
         });
-
-        grid.getChildren().addAll(b, txt1, b2, b3);
+       Button back =new Button("Back");
+              back.setLayoutX(300);
+        back.setLayoutY(410);
+        back.setOnMouseClicked(e->{
+           primaryStage.close();
+           new Login().start(primaryStage);
+       
+       });
+        grid.getChildren().addAll(b, txt1, b2, b3,back);
         Scene scene = new Scene(grid, 700, 450);
 
         primaryStage.setTitle("Hospital");

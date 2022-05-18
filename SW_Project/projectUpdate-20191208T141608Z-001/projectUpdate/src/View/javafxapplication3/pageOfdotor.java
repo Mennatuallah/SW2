@@ -39,6 +39,7 @@ public class pageOfdotor extends Application {
         Label lb4 = new Label("To show the private message from patient");
         Button btn3 = new Button("Private Message");
         Button b3 = new Button("EXIT");
+        Button back =  new Button("Back");
         Stage stage1 = new Stage();
         Label l1 = new Label();
         Label l2 = new Label();
@@ -83,6 +84,7 @@ public class pageOfdotor extends Application {
         root1.getChildren().add(l1);
         root1.getChildren().add(l2);
         root1.getChildren().add(b3);
+        root1.getChildren().add(back);
         stage1.setTitle("Report");
 
         stage1.setScene(scene1);
@@ -228,7 +230,7 @@ public class pageOfdotor extends Application {
         root.getChildren().add(lb4);
         root.getChildren().add(btn3);
         root.getChildren().add(b3);
-
+        root.getChildren().add(back);
         root.setStyle("-fx-background-color: lightyellow");
 
         Scene scene = new Scene(root, 800, 650);
@@ -255,6 +257,11 @@ public class pageOfdotor extends Application {
                 Platform.exit();
             }
         });
+       back.setOnMouseClicked(e->{
+           primaryStage.close();
+           new Login().start(primaryStage);
+       
+       });
         btn4.setOnAction((ActionEvent event) -> {
             String did = tx1.getText();
             String pid = tx2.getText();

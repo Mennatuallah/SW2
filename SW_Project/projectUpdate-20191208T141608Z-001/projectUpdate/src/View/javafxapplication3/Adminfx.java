@@ -38,8 +38,8 @@ public class Adminfx extends Application {
         Button b1 = new Button("Page of Patient");
         Button b2 = new Button("Page of Doctor");
         Button b3 = new Button("Exit");
-
-        v.getChildren().addAll(b1, b2, b3);
+        Button back = new Button("Back");
+        v.getChildren().addAll(b1, b2, b3,back);
 
         VBox.setMargin(b2, new Insets(10));
         VBox.setMargin(b1, new Insets(10));
@@ -52,7 +52,7 @@ public class Adminfx extends Application {
         b1.setPrefSize(150, 50);
         b2.setPrefSize(150, 50);
         b3.setPrefSize(150, 50);
-
+        back.setPrefSize(150, 50);
         Scene scene = new Scene(root, 500, 400);
         scene.getStylesheets().add(Adminfx.class.getResource("Adminfx.css").toExternalForm());
         b2.setOnMouseClicked(e -> {
@@ -70,6 +70,11 @@ public class Adminfx extends Application {
                 Platform.exit();
             }
         });
+               back.setOnMouseClicked(e->{
+           primaryStage.close();
+           new Login().start(primaryStage);
+       
+       });
         primaryStage.setTitle("Admin Page");
         primaryStage.setScene(scene);
         primaryStage.show();

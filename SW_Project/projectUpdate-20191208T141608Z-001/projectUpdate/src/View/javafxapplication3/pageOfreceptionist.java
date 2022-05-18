@@ -50,24 +50,28 @@ public class pageOfreceptionist extends Application {
         Button btn3 = new Button("Filter Appointments");
         Button btn4 = new Button("Book an Appointment");
         Button btn5 = new Button("EXIT");
+        Button back = new Button("Back");
 
         //x-axis translation
         btn1.setTranslateX(100);
         btn2.setTranslateX(300);
         btn3.setTranslateX(100);
         btn4.setTranslateX(300);
-        btn5.setTranslateX(300);
+        btn5.setTranslateX(200);
+        back.setTranslateX(400);
         //y-axis translation
         btn1.setTranslateY(150);
         btn2.setTranslateY(150);
         btn3.setTranslateY(300);
         btn4.setTranslateY(300);
-        btn5.setTranslateY(300);
+        btn5.setTranslateY(400);
+        back.setTranslateY(500);
         root.getChildren().add(btn1);
         root.getChildren().add(btn2);
         root.getChildren().add(btn3);
         root.getChildren().add(btn4);
         root.getChildren().add(btn5);
+        root.getChildren().add(back);
         receptionist r = new receptionist();
         btn1.setOnAction((ActionEvent event) -> {
             r.displayALLTimeTable();
@@ -93,6 +97,11 @@ public class pageOfreceptionist extends Application {
                 Platform.exit();
             }
         });
+               back.setOnAction(e->{
+           window.close();
+           new Login().start(window);
+       
+       });
         window.setScene(scene1);
         window.show();
     }

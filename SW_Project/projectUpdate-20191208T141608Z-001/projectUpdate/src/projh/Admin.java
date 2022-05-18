@@ -6,7 +6,7 @@
 package projh;
 
 
-public class Admin extends staff {
+public class Admin extends staff implements IAdmin{
      public Admin() {
 
     }
@@ -18,39 +18,34 @@ public class Admin extends staff {
     
     
     
-    public void addNewVpatient(String user, String pass, int id, String fname, String lname, int age, String Mhistory, String Time,String Dfname,String Dlname,int dID,department dept)
-    {
-        VisitorPatient vp = new VisitorPatient(user, pass, id, fname, lname, age, Mhistory, Time,Dfname,Dlname,dID,dept);
-        if(vp.addpatient()){
-             System.out.println("Added NewVisitorPatient Successfully ... !");
-        }else{
-            System.out.println("Failed to insert ... !");            
-        }                        
-    }
 
+     @Override
     public String displayAllVisitorPatient() {
-        VisitorPatient vp = new VisitorPatient();
-        System.out.println(vp.displayAllPatient());
-        return vp.displayAllPatient();
+        VisitorPatient Visitor_Patient = new VisitorPatient();
+        System.out.println(Visitor_Patient.displayAllPatient());
+        return Visitor_Patient.displayAllPatient();
     }
 
+     @Override
     public void searchForVisitorPatient(int id) {
-        VisitorPatient vp = new VisitorPatient();
-        System.out.println(vp.searchPatient(id));
+        VisitorPatient Visitor_Patient = new VisitorPatient();
+        System.out.println(Visitor_Patient.searchPatient(id));
     }
 
+     @Override
     public void updateVisitorPatient(int oldID, VisitorPatient newVisitorPatientValues) {
-        VisitorPatient vp = new VisitorPatient();
-        if (vp.updatePatient(oldID, newVisitorPatientValues)) {
+        VisitorPatient Visitor_Patient = new VisitorPatient();
+        if (Visitor_Patient.updatePatient(oldID, newVisitorPatientValues)) {
             System.out.println(newVisitorPatientValues.toString() + "Updated Successfully ... !");
         } else {
             System.out.println("Failed to Updated ... !");
         }
     }
 
+     @Override
     public void deleteVisitorPatient(int Id) {
-        VisitorPatient vp = new VisitorPatient();
-        if (vp.deletePation(Id)) {
+        VisitorPatient Visitor_Patient = new VisitorPatient();
+        if (Visitor_Patient.deletePation(Id)) {
            System.out.println("VisitorPatient: "+ Id + " Deleted Successfully ... !");
         } else {
             System.out.println("Failed to Deleted ... !");
@@ -58,43 +53,46 @@ public class Admin extends staff {
     }
     
     
-    
+    @Override
     public void addNewRpatient(String user, String pass, int id, String fname, String lname, int age, String Mhistory, String Time,String Dfname,String Dlname,int dID,department dept,int mybedID,int myroomNumber)
     {
-        ResidentPatient rp = new ResidentPatient(user, pass, id, fname, lname, age, Mhistory, Time,Dfname,Dlname,dID, dept,mybedID,myroomNumber);
-        if(rp.addpatient()){
+        ResidentPatient Resident_Patient = new ResidentPatient(user, pass, id, fname, lname, age, Mhistory, Time,Dfname,Dlname,dID, dept,mybedID,myroomNumber);
+        if(Resident_Patient.addpatient()){
              System.out.println("Added NewResidentPatient Successfully ... !");
         }else{
             System.out.println("Failed to insert ... !");            
         }   
-         bed b =new bed(id,myroomNumber);
-         b.bookbed(mybedID, myroomNumber); //
+         bed bed =new bed(id,myroomNumber);
+         bed.bookbed(mybedID, myroomNumber); //
         System.out.println("And booked hisbed Successfully ... !");
     }  
     
+@Override
     public String displayAllResidentPatient() {
-        ResidentPatient rp = new ResidentPatient();
-        System.out.println(rp.displayAllPatient());
-        return rp.displayAllPatient();
+        ResidentPatient Resident_Patient = new ResidentPatient();
+        System.out.println(Resident_Patient.displayAllPatient());
+        return Resident_Patient.displayAllPatient();
     }
-
+@Override
     public void searchForResidentPatient(int id) {
-        ResidentPatient rp = new ResidentPatient();
-        System.out.println(rp.searchPatient(id));
+        ResidentPatient Resident_Patient = new ResidentPatient();
+        System.out.println(Resident_Patient.searchPatient(id));
     }
 
+     @Override
     public void updateResidentPatient(int oldID, ResidentPatient newResidentPatientValues) {
-        ResidentPatient rp = new ResidentPatient();
-        if (rp.updatePatient(oldID, newResidentPatientValues)) {
+        ResidentPatient Resident_Patient = new ResidentPatient();
+        if (Resident_Patient.updatePatient(oldID, newResidentPatientValues)) {
             System.out.println(newResidentPatientValues.toString() + "Updated Successfully ... !");
         } else {
             System.out.println("Failed to Updated ... !");
         }
     }
 
+     @Override
     public void deleteResidentPatient(int Id) {
-        ResidentPatient rp = new ResidentPatient();
-        if (rp.deletePation(Id)) {
+        ResidentPatient Resident_Patient = new ResidentPatient();
+        if (Resident_Patient.deletePation(Id)) {
            System.out.println("ResidentPatient: "+ Id + " Deleted Successfully ... !");
         } else {
             System.out.println("Failed to Deleted ... !");
@@ -104,38 +102,43 @@ public class Admin extends staff {
     
     
     
+     @Override
     public void addNewDoctor(String user, String pass, int id, String fname, String lname, int age,double salary, department dept,String timetable) {
-        Doctor doc = new Doctor(user, pass, id, fname, lname, age,salary, dept,timetable);
-        if (doc.addDoctors()) {
-            System.out.println(doc.toString() + "Added New Doctor Successfully ... !");
+        Doctor Doctor = new Doctor(user, pass, id, fname, lname, age,salary, dept,timetable);
+        if (Doctor.addDoctors()) {
+            System.out.println(Doctor.toString() + "Added New Doctor Successfully ... !");
         } else {
             System.out.println("Failed to insert ... !");
         }
     }
     
+     @Override
     public String displayAllDoctor() {
-        Doctor doc = new Doctor();
-        System.out.println(doc.displayAllDoctors());
-        return doc.displayAllDoctors();
+        Doctor doctor = new Doctor();
+        System.out.println(doctor.displayAllDoctors());
+        return doctor.displayAllDoctors();
     }
 
+     @Override
     public void searchForDoctor(int id) {
-        Doctor doc = new Doctor();
-        System.out.println(doc.searchDoctor(id));
+        Doctor doctor = new Doctor();
+        System.out.println(doctor.searchDoctor(id));
     }
 
+     @Override
     public void updateDoctor(int oldID, Doctor newDoctorValues) {
-        Doctor doc = new Doctor();
-        if (doc.updateDoctor(oldID, newDoctorValues)) {
+        Doctor doctor = new Doctor();
+        if (doctor.updateDoctor(oldID, newDoctorValues)) {
             System.out.println(newDoctorValues.toString() + "Updated Successfully ... !");
         } else {
             System.out.println("Failed to Updated ... !");
         }
     }
 
+     @Override
     public void deleteDoctor(int Id) {
-        Doctor doc = new Doctor();
-        if (doc.deleteDoctor(Id)) {
+        Doctor doctor = new Doctor();
+        if (doctor.deleteDoctor(Id)) {
            System.out.println("Doctor: "+ Id + " Deleted Successfully ... !");
         } else {
             System.out.println("Failed to Deleted ... !");
@@ -147,6 +150,16 @@ public class Admin extends staff {
     @Override
        public String toString() {
         return "I'm Manager : " + firstName + " " + lastName + "\n" + "ID : " + id + " Age : " + age + " Salary : " + salary + "\n" + "Dept. : " + myDepartment.getDepartmentName() + "\nUserName: " + userName + "\t Password: " + password + "\n";
+    }
+
+    @Override
+    public void addNewVpatient(String user, String pass, int id, String fname, String lname, int age, String Mhistory, String Time, String Dfname, String Dlname, int dID, department dept) {
+               VisitorPatient Visitor_Patient = new VisitorPatient(user, pass, id, fname, lname, age, Mhistory, Time,Dfname,Dlname,dID,dept);
+        if(Visitor_Patient.addpatient()){
+             System.out.println("Added NewVisitorPatient Successfully ... !");
+        }else{
+            System.out.println("Failed to insert ... !");            
+        }  
     }
 
     

@@ -7,10 +7,10 @@ package projh;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Doctor extends staff implements Serializable {
+public class Doctor extends staff implements Serializable , IDoctor {
     
-    protected String timetable ;
-    protected String myreport;
+    protected String TimeTable ;
+    protected String MyReport;
     private final String Docfilename  = "Doc.bin" ;
     public static ArrayList<Doctor>  doctors = new ArrayList<Doctor>();
     
@@ -20,31 +20,33 @@ public class Doctor extends staff implements Serializable {
     
     public Doctor(String user, String pass, int id, String fname, String lname, int age, double salary, department dept,String timetable) {
         super(user, pass, id, fname, lname, age,salary, dept);
-        this.timetable=timetable;
+        this.TimeTable=timetable;
         
     }
     
     public void setTimeTable(String timetable)
     {
-        this.timetable=timetable;        
+        this.TimeTable=timetable;        
     }
     
     public String getTimeTable()
     {
-        return this.timetable;
+        return this.TimeTable;
     }
     
+    @Override
     public boolean addDoctors() {
         loadFromFile();
         doctors.add(this);
         return commitToFile();
     }
     
-    String displayAllTimeTable() {
+    @Override
+    public String displayAllTimeTable() {
         loadFromFile();
         String S = "\nAll timetable Data:\n";
         for (Doctor x : doctors) {
-            S = S + x.firstName + "  " +x.lastName+"  "+x.timetable +"\n";
+            S = S + x.firstName + "  " +x.lastName+"  "+x.TimeTable +"\n";
         }
         return S;
     }
@@ -57,31 +59,35 @@ public class Doctor extends staff implements Serializable {
         if (FManger.read(Docfilename)!=null)
         doctors = (ArrayList<Doctor>) FManger.read(Docfilename);
     }
-    
+    @Override
     public void approve(int pID,int dID){
         appointment x = new appointment();
         x.approve(pID, dID);         
     }   
     
     
+    @Override
     public void MakeReport(int dID,int pID,String myreport)
     {
-        appointment ap= new appointment();
-        ap.addReport(dID,pID, myreport);             
+        appointment Appointment= new appointment();
+        Appointment.addReport(dID,pID, myreport);             
     }
     
+    @Override
     public void showMHistoryofVisitor(int pid)
     {
-        VisitorPatient v = new VisitorPatient();
-        System.out.println(v.dispalyMHistory(pid));
+        VisitorPatient VisitorPatient = new VisitorPatient();
+        System.out.println(VisitorPatient.dispalyMHistory(pid));
     }
     
+    @Override
      public void showMHistoryofResident(int pid)
     {
-        ResidentPatient rp = new ResidentPatient();
-        System.out.println(rp.dispalyMHistory(pid));
+        ResidentPatient ResidentPatient = new ResidentPatient();
+        System.out.println(ResidentPatient.dispalyMHistory(pid));
     }
      
+    @Override
     public String displayAllDoctors() {
         loadFromFile();
         String S = "\nAll Doctors Data:\n";
@@ -92,12 +98,13 @@ public class Doctor extends staff implements Serializable {
     }
      
      
-      public boolean updateDoctor(int oldID,Doctor x)
+    @Override
+      public boolean updateDoctor(int oldID,Doctor doctor)
     {
         loadFromFile();
         int index = getDoctorIndex(oldID);
         if (index != -1) {
-            doctors.set(index, x);
+            doctors.set(index, doctor);
             return commitToFile();
         }
         return false;        
@@ -105,6 +112,7 @@ public class Doctor extends staff implements Serializable {
     
 
     
+    @Override
     public boolean deleteDoctor(int id) {
         loadFromFile();
         int index = getDoctorIndex(id);
@@ -116,6 +124,7 @@ public class Doctor extends staff implements Serializable {
     }
 
     
+    @Override
     public String searchDoctor(int id) {
         loadFromFile();
         int index = getDoctorIndex(id);

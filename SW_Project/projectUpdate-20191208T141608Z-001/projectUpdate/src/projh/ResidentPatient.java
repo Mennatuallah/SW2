@@ -68,15 +68,15 @@ public class ResidentPatient extends patient implements Serializable {
     public void makeApp(int id)
     {
         
-        for(ResidentPatient r : residentPatients)
+        for(ResidentPatient Resident_Patient : residentPatients)
         {
-            if(r.id==id)
+            if(Resident_Patient.id==id)
             {
-                appointment a = new appointment(r.firstName,r.lastName,r.id,r.DoctorFirstName,r.DoctorLastName,r.doctorID,r.Time);
-                if(a.checkallow(r.doctorID,r.Time))
+                appointment a = new appointment(Resident_Patient.firstName,Resident_Patient.lastName,Resident_Patient.id,Resident_Patient.DoctorFirstName,Resident_Patient.DoctorLastName,Resident_Patient.doctorID,Resident_Patient.Time);
+                if(a.checkallow(Resident_Patient.doctorID,Resident_Patient.Time))
                 {
                    if (a.addappointment()) {
-                   System.out.println(r.toString() + "Added Appointment Successfully ... !");
+                   System.out.println(Resident_Patient.toString() + "Added Appointment Successfully ... !");
                    } else  {
                    System.out.println("Failed to insert ... !");
                    }
@@ -100,12 +100,12 @@ public class ResidentPatient extends patient implements Serializable {
     }
     
     
-    public boolean updatePatient(int oldID,ResidentPatient x)
+    public boolean updatePatient(int oldID,ResidentPatient Resident_Patient)
     {
         loadFromFile();
         int index = getPatientIndex(oldID);
         if (index != -1) {
-            residentPatients.set(index, x);
+            residentPatients.set(index, Resident_Patient);
             return commitToFile();
         }
         return false;  
@@ -159,10 +159,10 @@ public class ResidentPatient extends patient implements Serializable {
     @Override
     public String dispalyMHistory(int id) {
         String messageHistory = "\n your Report :";
-        for(ResidentPatient x : residentPatients)
+        for(ResidentPatient Resident_Patient : residentPatients)
         {
-            if(x.id==id){ 
-                messageHistory= messageHistory + x.MessageHistory ;             
+            if(Resident_Patient.id==id){ 
+                messageHistory= messageHistory + Resident_Patient.MessageHistory ;             
             }
         }
         return messageHistory ;
